@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637593729701531035
-    m_Hash: 589580459
+      ticks: 637593904814286609
+    m_Hash: 1901523626
   m_LockFileStatus:
     m_FilePath: C:/Users/manaluma/Chamber Of Secret/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637593729703703491
-    m_Hash: 2649203527
+      ticks: 637593904814286609
+    m_Hash: 683192526
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:

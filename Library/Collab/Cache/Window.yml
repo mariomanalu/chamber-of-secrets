@@ -14,29 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Characters/Newton/Isaac_Newton Material.mat
-    - Assets/Characters/Newton/Isaac_Newton.fbx.meta
-    - Assets/Characters/Newton/Newton Controller.controller
-    - Assets/Characters/Newton/xbot@Right Turn 90.fbx.meta
-    - Assets/Characters/Newton/xbot@Walking.fbx.meta
-    - Assets/Scenes/Chamber.unity
-    - Assets/XR/Loaders/Open XR Loader No Pre Init.asset
-    - Assets/XR/Loaders/Open XR Loader No Pre Init.asset.meta
-    - Assets/XR/Loaders/Open XR Loader.asset
-    - Assets/XR/Loaders/Open XR Loader.asset.meta
-    - Assets/XR/Settings/Open XR Package Settings.asset
-    - Assets/XR/Settings/Open XR Package Settings.asset.meta
-    - Assets/XR/Settings/OpenXR Editor Settings.asset
-    - Assets/XR/Settings/OpenXR Editor Settings.asset.meta
-    - Assets/XR/XRGeneralSettings.asset
-    - Packages/manifest.json
-    - Packages/packages-lock.json
-    - ProjectSettings/EditorBuildSettings.asset
-    - ProjectSettings/ProjectSettings.asset
     - 
-    m_Values: 0000000000000000000000000000000000000000
-  RevisionSummary: 
+    m_Values: 01
+  RevisionSummary: Museum ver 1 (2)
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0
-  TabIndex: 0
+  TabIndex: 1
