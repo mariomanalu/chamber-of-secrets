@@ -5,23 +5,34 @@ using UnityEngine;
 public class Newton : MonoBehaviour
 {
     public GameObject Player;
-    // public GameObject TheNPC;
-    // public float TargetDistance;
-    // public float AllowedDistance = 5;
+    public GameObject TheNPC;
+    public float TargetDistance;
+    private float AllowedDistance = 1;
     public float FollowSpeed;
 
-    // public RaycastHit Shot;
-   
-    Animator animator;
+    public RaycastHit Shot;
 
-    // Start is called before the first frame update
-    void Start()
+    public Animator animator;
+    void Update()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        animator = GetComponent<Animator>();
-    }
+        transform.LookAt(Player.transform);
 
-    // void Update()
+        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Shot)){
+            TargetDistance = Shot.distance;
+
+            if (TargetDistance >= AllowedDistance){
+                FollowSpeed = 0.02f;
+                animator.SetBool("isWalking", true);
+                transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, FollowSpeed);
+            }
+            else {
+                FollowSpeed = 0;
+                animator.SetBool("isWalking", false);
+            }
+        }
+    }
+    
+    //  void Update()
     // {
     //     transform.LookAt(Player.transform);
 
@@ -30,32 +41,33 @@ public class Newton : MonoBehaviour
 
     //         if (TargetDistance >= AllowedDistance){
     //             FollowSpeed = 0.02f;
-    //             animator.Play("xbot@Walking");
+    //             TheNPC.GetComponent<Animation>().Play("Walking");
     //             transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, FollowSpeed);
     //         }
     //         else {
     //             FollowSpeed = 0;
-    //             animator.Play("xbot@Laughing");
+    //             TheNPC.GetComponent<Animation>().Play("Acknowledging");
     //         }
     //     }
     // }
     
-    private void OnTriggerEnter(Collider other){
-        transform.LookAt(Player.transform);
-        if (other.tag == "Player"){
-            Debug.Log("here");
-            animator.SetBool("isWalking", true);
-            Debug.Log("and here");
-            transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, FollowSpeed);
-            Debug.Log("a here");
-        }
-    }
 
-    private void OnTriggerExit(Collider other){
-        Debug.Log("BE");
-        if (other.tag == "Player"){
-            animator.SetBool("isWalking", false);
-        }
-    }
+    // private void OnTriggerEnter(Collider other){
+    //     transform.LookAt(Player.transform);
+    //     if (other.tag == "Player"){
+    //         FollowSpeed = 0.02f;
+    //         animator.SetBool("isWalking", true);
+    //         Vector3 newPosition = new Vector3(Player.transform.position.x + 1, 0, Player.transform.position.z);
+    //         transform.position = Vector3.MoveTowards(transform.position, newPosition, FollowSpeed);
+    //     }
+    // }
+
+    // private void OnTriggerExit(Collider other){
+    //     Debug.Log("BE");
+    //     if (other.tag == "Player"){
+    //         FollowSpeed = 0;
+    //         animator.SetBool("isWalking", false);
+    //     }
+    // }
 
 } 
