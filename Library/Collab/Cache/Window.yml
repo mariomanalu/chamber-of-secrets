@@ -13,11 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
-    m_Keys:
-    - Assets/Characters/Newton/Newton Controller.controller
-    - Assets/Scenes/Chamber.unity
-    - 
-    m_Values: 010101
+    m_Keys: []
+    m_Values: 
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
