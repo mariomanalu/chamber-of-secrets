@@ -71,17 +71,22 @@ public class VectorDisplay : Display
 
     private void OnDestroy()
     {
-        plotVectorsBuffer.Release();
-        plotVectorsBuffer = null;
-
-        vector2Buffer.Release();
-        vector2Buffer = null;
-
-        vector3Buffer.Release();
-        vector3Buffer = null;
-
-        magnitudesBuffer.Release();
-        magnitudesBuffer = null;
+        if(plotVectorsBuffer != null) {
+            plotVectorsBuffer.Release();
+            plotVectorsBuffer = null;
+        }
+        if(vector2Buffer != null) {
+            vector2Buffer.Release();
+            vector2Buffer = null;
+        }
+        if(vector3Buffer != null) {
+            vector3Buffer.Release();
+            vector3Buffer = null;
+        }
+        if(magnitudesBuffer != null) {
+            magnitudesBuffer.Release();
+            magnitudesBuffer = null;
+        }
 
         initialized = false;
     }
@@ -137,11 +142,9 @@ public class VectorDisplay : Display
         Graphics.DrawMeshInstancedProcedural(pointerMesh, 0, pointerMaterial, bounds, numOfPoints);
 
         //// Debugging code
-        //Debug.Log("Max vector length: " + maxVectorLength);
         //Vector3[] debugArray = new Vector3[numOfPoints];
         ////float[] debugArray = new float[numOfPoints];
         //plotVectorsBuffer.GetData(debugArray);
-        ////Debug.Log("Number of points in plot array:" + magnitudesBuffer.count);
         //Debug.Log((("First three points in plot array: " + debugArray[0]) + debugArray[1]) + debugArray[2]);
         //Debug.Log((("Last three points in plot array: " + debugArray[numOfPoints - 1]) + debugArray[numOfPoints - 2]) + debugArray[numOfPoints - 3]);
     }

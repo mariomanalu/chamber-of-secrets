@@ -29,42 +29,19 @@ public class VectorField : MonoBehaviour
     /// Same indexing scheme as <cref>positionsBuffer</cref>.
     /// </summary>
     public ComputeBuffer vectorsBuffer { get; protected set; }
-    ///// <summary>
-    ///// The buffer in which the visual magnitudes of each vector are stored. 
-    ///// Same indexing scheme as <cref>positionsBuffer</cref>.
-    ///// </summary>
-    //public ComputeBuffer plotVectorsBuffer { get; protected set; }
-    ///// <summary>
-    ///// One of two buffers in which values used for calculating the transformation matrix for vectors are stored.
-    ///// Same indexing scheme as <cref>positionsBuffer</cref>.
-    ///// 
-    ///// Contains vectors orthogonal to those in <cref>plotVectorsBuffer</cref>, with the same magnitude, in order 
-    ///// to generate an orthogonal basis. 
-    ///// </summary>
-    //public ComputeBuffer vector2Buffer { get; protected set; }
-    ///// <summary>
-    ///// One of two buffers in which values used for calculating the transformation matrix for vectors are stored.
-    ///// Same indexing scheme as <cref>positionsBuffer</cref>.
-    ///// 
-    ///// Contains vectors orthogonal to those in <cref>plotVectorsBuffer</cref>, with the same magnitude, in order 
-    ///// to generate an orthogonal basis. 
-    ///// </summary>
-    //public ComputeBuffer vector3Buffer { get; protected set; }
-    ///// <summary>
-    ///// Stores the magnitudes of the vectors in <cref>vectorsBuffer</cref>. 
-    ///// Same indexing scheme as <cref>positionsBuffer</cref>.
-    ///// </summary>
-    //public ComputeBuffer magnitudesBuffer { get; protected set; }
-    /// <summary>
-    /// Stores the extra vector arguments used in the computation.
-    /// Set your own indexing scheme. 
-    /// </summary>
-    public ComputeBuffer vectorArgsBuffer { get; set; }
     /// <summary>
     /// Stores the extra float arguments used in the computation.
-    /// Set your own indexing scheme. 
+    /// Set your own indexing scheme and initialize by subscribing
+    /// to the `preCalculations` delegate.
     /// </summary>
     public ComputeBuffer floatArgsBuffer { get; set; }
+    /// <summary>
+    /// Stores the extra vector arguments used in the computation.
+    /// Set your own indexing scheme and initialize by subscribing
+    /// to the `preCalculations` delegate.
+    /// </summary>
+    public ComputeBuffer vectorArgsBuffer { get; set; }
+    
 
     /// <summary>
     /// The number of points at which vectors will be plotted and the number of values in each buffer.
@@ -75,32 +52,16 @@ public class VectorField : MonoBehaviour
     /// The compute shader used to generate the vector field. 
     /// </summary>
     [SerializeField]
-    ComputeShader computeShader;
+    public ComputeShader computeShader;
 
     // Property IDs used to send values to various shaders.
     static readonly int
         centerID = Shader.PropertyToID("_CenterPosition"),
         positionsBufferID = Shader.PropertyToID("_Positions"),
         vectorBufferID = Shader.PropertyToID("_Vectors"),
-        //plotVectorsBufferID = Shader.PropertyToID("_PlotVectors"),
-        //vector2BufferID = Shader.PropertyToID("_Vectors2"),
-        //vector3BufferID = Shader.PropertyToID("_Vectors3"),
         floatArgsID = Shader.PropertyToID("_FloatArgs"),
         vectorArgsID = Shader.PropertyToID("_VectorArgs");
-        //magnitudesBufferID = Shader.PropertyToID("_Magnitudes"),
-        //maxVectorLengthID = Shader.PropertyToID("_MaxVectorLength"),
-        //fieldIndexID = Shader.PropertyToID("_FieldIndex");
 
-    ///// <summary>
-    ///// The material used to draw the vector field. Must be capable of handling GPU instancing. 
-    ///// </summary>
-    //[SerializeField]
-    //public Material pointerMaterial;
-    ///// <summary>
-    ///// The mesh to draw the pointers from.
-    ///// </summary>
-    //[SerializeField]
-    //Mesh pointerMesh;
 
     /// <summary>
     /// The possible types of field to display. 
@@ -114,39 +75,59 @@ public class VectorField : MonoBehaviour
     public FieldType fieldType;
 
     /// <summary>
-    /// Set this to true if the field should update when the transform is moved in Play Mode. 
-    /// Requires more GPU time. Sets <cref>isDynamic</cref> to true as well. 
-    /// </summary>
-    [SerializeField]
-    bool canMove;
-    /// <summary>
     /// Set this to true if the field values should be updated each frame. 
     /// Requires more GPU time. 
+    /// 
+    /// Tip: this can be toggled on during play mode to force the field to recalculate, then 
+    /// toggled back off. 
     /// </summary>
     [SerializeField]
     bool isDynamic;
+    /// <summary>
+    /// Indicates whether the vectors buffer has been initialized. For non-dynamic fields. 
+    /// </summary>
+    private bool hasBeenCalculated;
 
     [SerializeField]
     public Display display { get; protected set; }
 
 
+    public delegate void Reminder();
+    /// <summary>
+    /// This delegate will get called prior to setting the positions buffer.
+    /// </summary>
+    public Reminder preSetPositions;
+    /// <summary>
+    /// This delegate will get called prior to setting the vectors buffer. 
+    /// </summary>
+    public Reminder preCalculations;
+    /// <summary>
+    /// This delegate will get called prior to displaying the field. 
+    /// </summary>
+    public Reminder preDisplay;
 
 
 
-    private void Awake()
-    {
-        if (zone == null)
-        {
+
+
+    private void Awake() {
+        if (zone == null) {
             zone = GetComponent<FieldZone>();
         }
-        if (display == null)
-        {
+        if (display == null) {
             display = GetComponent<Display>();
         }
     }
 
     private void OnEnable()
     {
+        preSetPositions += Pass;
+        preCalculations += Pass;
+        preDisplay += Pass;
+
+
+        preSetPositions();
+
         zone.SetPositions();
 
         positionsBuffer = zone.positionBuffer;
@@ -155,16 +136,9 @@ public class VectorField : MonoBehaviour
         unsafe // <-- This could maybe be a source of problems.
         {
             vectorsBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3)); // last arg: size of single object
-            //plotVectorsBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
-            //vector2Buffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
-            //vector3Buffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
-            //magnitudesBuffer = new ComputeBuffer(numOfPoints, sizeof(float));
         }
 
-        CalculateVectors();
-
-        display.maxVectorLength = zone.maxVectorLength;
-        display.bounds = zone.bounds;
+        
     }
 
 
@@ -173,18 +147,6 @@ public class VectorField : MonoBehaviour
     {
         vectorsBuffer.Release();
         vectorsBuffer = null;
-
-        //plotVectorsBuffer.Release();
-        //plotVectorsBuffer = null;
-
-        //vector2Buffer.Release();
-        //vector2Buffer = null;
-
-        //vector3Buffer.Release();
-        //vector3Buffer = null;
-
-        //magnitudesBuffer.Release();
-        //magnitudesBuffer = null;
     }
 
 
@@ -192,26 +154,35 @@ public class VectorField : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canMove) {
-            zone.SetPositions();
+        preSetPositions();
+        zone.SetPositions();
+
+        if (zone.canMove) {
             isDynamic = true;
         }
 
-        if(isDynamic)
+        
+        if(isDynamic || !hasBeenCalculated)
         {
+            preCalculations();
             CalculateVectors();
+            hasBeenCalculated = true;
+
+            display.maxVectorLength = zone.maxVectorLength;
+            display.bounds = zone.bounds;
         }
 
-        //// Debug code
-        Vector3[] debugArray = new Vector3[numOfPoints];
-        vectorsBuffer.GetData(debugArray);
-        Debug.Log((("First three points in vector array: " + debugArray[0]) + debugArray[1]) + debugArray[2]);
-        Debug.Log((("Last three points in vector array: " + debugArray[numOfPoints - 1]) + debugArray[numOfPoints - 2]) + debugArray[numOfPoints - 3]);
+        // Debug code
+        //Vector3[] debugArray = new Vector3[numOfPoints];
+        //vectorsBuffer.GetData(debugArray);
+        //Debug.Log((("First three points in vector array: " + debugArray[0]) + debugArray[1]) + debugArray[2]);
+        //Debug.Log((("Last three points in vector array: " + debugArray[numOfPoints - 1]) + debugArray[numOfPoints - 2]) + debugArray[numOfPoints - 3]);
     }
 
-    private void LateUpdate()
+    private void LateUpdate() // WHAT REQUIRES THIS? %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     {
-        //PlotResults();
+        preDisplay();
+
         display.DisplayVectors(positionsBuffer, vectorsBuffer);
     }
 
@@ -223,43 +194,33 @@ public class VectorField : MonoBehaviour
     {
         // The data is sent to the computeShader for calculation
         computeShader.SetVector(centerID, zone.fieldOrigin);
-        //computeShader.SetFloat(maxVectorLengthID, zone.maxVectorLength);
-        //computeShader.SetInt(fieldIndexID, (int)fieldType);
 
         int kernelID = (int)fieldType;
         computeShader.SetBuffer(kernelID, positionsBufferID, positionsBuffer);
         computeShader.SetBuffer(kernelID, vectorBufferID, vectorsBuffer);
-        //computeShader.SetBuffer(kernelID, plotVectorsBufferID, plotVectorsBuffer);
-        //computeShader.SetBuffer(kernelID, vector2BufferID, vector2Buffer);
-        //computeShader.SetBuffer(kernelID, vector3BufferID, vector3Buffer);
-        //computeShader.SetBuffer(kernelID, magnitudesBufferID, magnitudesBuffer);
         if(floatArgsBuffer != null) {
             computeShader.SetBuffer(kernelID, floatArgsID, floatArgsBuffer);
         }
         if(vectorArgsBuffer != null) {
             computeShader.SetBuffer(kernelID, vectorArgsID, vectorArgsBuffer);
         }
-        
+
         // This does the math and stores information in the positionsBuffer.
         int groups = Mathf.CeilToInt(numOfPoints / 64f);
         computeShader.Dispatch(kernelID, groups, 1, 1);
     }
 
+    public void Pass()
+    {
+        ;
+    }
 
-    ///// <summary>
-    ///// Interfaces with the <cref>pointerMaterial</cref> to display the vector field. 
-    ///// </summary>
-    //void PlotResults()
-    //{
-    //    // Then the data from the computeShader is sent to the shader to be rendered.
-    //    pointerMaterial.SetBuffer(positionsBufferID, positionsBuffer);
-    //    pointerMaterial.SetBuffer(plotVectorsBufferID, plotVectorsBuffer);
-    //    pointerMaterial.SetBuffer(vector2BufferID, vector2Buffer);
-    //    pointerMaterial.SetBuffer(vector3BufferID, vector3Buffer);
-    //    pointerMaterial.SetBuffer(magnitudesBufferID, magnitudesBuffer);
-
-    //    // Setting the bounds and giving a draw call
-    //    var bounds = zone.bounds;
-    //    Graphics.DrawMeshInstancedProcedural(pointerMesh, 0, pointerMaterial, bounds, numOfPoints);
-    //}
+    private void OnDrawGizmos()
+    {
+        if(display != null && display.bounds != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(display.bounds.center, display.bounds.size);
+        }
+    }
 }

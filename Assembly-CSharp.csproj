@@ -36,16 +36,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Museum\Newton.cs" />
-     <Compile Include="Assets\Scripts\Coil and Magnet\NorthPole.cs" />
-     <Compile Include="Assets\Scripts\Coil and Magnet\SouthPole.cs" />
-     <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\FieldDetector.cs" />
-     <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorField.cs" />
-     <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\FieldZone.cs" />
-     <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorDisplay.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\Display.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\SouthPole.cs" />
+     <Compile Include="Assets\Scripts\Museum\Newton.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\FieldZone.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorField.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\FieldDetector.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorDisplay.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\NorthPole.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\RectZone.cs" />
-     <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\Magnet.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\Magnetic.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\computeShader.compute" />
@@ -695,6 +695,9 @@
     <Reference Include="Unity.InteractiveTutorials.Core.Scripts">
         <HintPath>C:/Users/manaluma/Chamber Of Secret/Library/ScriptAssemblies/Unity.InteractiveTutorials.Core.Scripts.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+        <HintPath>C:/Users/manaluma/Chamber Of Secret/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.InteractiveTutorialsFramework">
         <HintPath>C:/Users/manaluma/Chamber Of Secret/Library/ScriptAssemblies/UnityEditor.InteractiveTutorialsFramework.dll</HintPath>
     </Reference>
@@ -718,6 +721,9 @@
     </Reference>
     <Reference Include="Unity.XR.Interaction.Toolkit">
         <HintPath>C:/Users/manaluma/Chamber Of Secret/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+        <HintPath>C:/Users/manaluma/Chamber Of Secret/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Subsystem.Registration">
         <HintPath>C:/Users/manaluma/Chamber Of Secret/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
@@ -772,12 +778,6 @@
     </Reference>
     <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor">
         <HintPath>C:/Users/manaluma/Chamber Of Secret/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>C:/Users/manaluma/Chamber Of Secret/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>C:/Users/manaluma/Chamber Of Secret/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
