@@ -47,8 +47,7 @@ public class Magnetic : MonoBehaviour
     }
 
     void Update(){
-        Debug.Log("NORTH" + northPole.transform.position);
-        Debug.Log("SOUTH" + southPole.transform.position);
+        
         
         vec_array[1] = northPole.transform.position;
         vec_array[2] = southPole.transform.position;
