@@ -50,5 +50,14 @@ float3 Coulomb(float3 position)
     //return float3(0.0, numCharges, 0.0);
 };
 
+float3 Db(float3 position, int index){
+    float3 field = Coulomb(position);
+    float3 fieldPast = _VectorsPast[index];
+    float3 vect = float3(0.0, 0.0, 0.0);
+
+    vect = (field - fieldPast) / _TimeInterval;
+    _VectorsPast[index] = field;
+    return vect;
+}
 // Every type that's added must also be present in the enum in VectorFields.cs and have a kernel in VectorCompute.compute
 

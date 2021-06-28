@@ -29,6 +29,7 @@ public class VectorField : MonoBehaviour
     /// Same indexing scheme as <cref>positionsBuffer</cref>.
     /// </summary>
     public ComputeBuffer vectorsBuffer { get; protected set; }
+    public ComputeBuffer vectorsPastBuffer { get; protected set; }
     /// <summary>
     /// Stores the extra float arguments used in the computation.
     /// Set your own indexing scheme and initialize by subscribing
@@ -59,7 +60,9 @@ public class VectorField : MonoBehaviour
         centerID = Shader.PropertyToID("_CenterPosition"),
         positionsBufferID = Shader.PropertyToID("_Positions"),
         vectorBufferID = Shader.PropertyToID("_Vectors"),
+        vectorPastBufferID = Shader.PropertyToID("_VectorsPast"),
         floatArgsID = Shader.PropertyToID("_FloatArgs"),
+        timeIntervalID = Shader.PropertyToID("_TimeInterval"),
         vectorArgsID = Shader.PropertyToID("_VectorArgs");
 
 
@@ -67,7 +70,7 @@ public class VectorField : MonoBehaviour
     /// The possible types of field to display. 
     /// It is the user's responsibility to make sure that these selections align with those in FieldLibrary.hlsl
     /// </summary>
-    public enum FieldType { Outwards, Swirl, Coulomb }
+    public enum FieldType { Outwards, Swirl, Coulomb, Db }
     /// <summary>
     /// The type of field to be displayed. Cannot be changed in Play Mode if <cref>isDynamic</cref> is set to False.
     /// </summary>
@@ -136,6 +139,7 @@ public class VectorField : MonoBehaviour
         unsafe // <-- This could maybe be a source of problems.
         {
             vectorsBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3)); // last arg: size of single object
+            vectorsPastBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
         }
 
         
@@ -147,6 +151,9 @@ public class VectorField : MonoBehaviour
     {
         vectorsBuffer.Release();
         vectorsBuffer = null;
+
+        vectorsPastBuffer.Release();
+        vectorsPastBuffer = null;
     }
 
 
@@ -156,6 +163,8 @@ public class VectorField : MonoBehaviour
     {
         preSetPositions();
         zone.SetPositions();
+
+        computeShader.SetFloat(timeIntervalID, Time.deltaTime);
 
         if (zone.canMove) {
             isDynamic = true;
@@ -203,6 +212,10 @@ public class VectorField : MonoBehaviour
         }
         if(vectorArgsBuffer != null) {
             computeShader.SetBuffer(kernelID, vectorArgsID, vectorArgsBuffer);
+        }
+        if(kernelID == (int)FieldType.Db){
+            Debug.Log("DbField");
+            computeShader.SetBuffer(kernelID, vectorPastBufferID, vectorsPastBuffer);
         }
 
         // This does the math and stores information in the positionsBuffer.
