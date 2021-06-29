@@ -55,9 +55,40 @@ float3 Db(float3 position, int index){
     float3 fieldPast = _VectorsPast[index];
     float3 vect = float3(0.0, 0.0, 0.0);
 
-    vect = (field - fieldPast) / _TimeInterval;
-    _VectorsPast[index] = field;
+    // vect =  (field - fieldPast) / (_TimeInterval);
+    // _VectorsPast[index] = field;
+    
+    if (dot(field-fieldPast, field-fieldPast)){
+        vect =  (field - fieldPast) / (_TimeInterval);
+        _VectorsPast[index] = field;
+        vect.x = vect.x /10;
+        vect.y = vect.y /10;
+        vect.z = vect.z /10;
+    }
+    else{
+        vect = _Vectors[index];
+    }
+
+
+   
     return vect;
+    //return vect;
+}
+
+float3 Electric(float3 position, int index){
+    float3 DbDt = Db(position, index);
+
+    float3 velocity = float3(-1,-1,-1);
+    float3 vect = float3(0.0, 0.0, 0.0);
+    float x = velocity.y * DbDt.z - DbDt.y * velocity.z;
+    float y = (velocity.x * DbDt.z - DbDt.x * velocity.z) * -1;
+    float z = velocity.x * DbDt.y - DbDt.x * velocity.y;
+
+    vect.x = x;
+    vect.y = y;
+    vect.z = z;
+    return vect;
+    
 }
 // Every type that's added must also be present in the enum in VectorFields.cs and have a kernel in VectorCompute.compute
 

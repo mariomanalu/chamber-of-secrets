@@ -60,8 +60,10 @@ public class VectorField : MonoBehaviour
         centerID = Shader.PropertyToID("_CenterPosition"),
         positionsBufferID = Shader.PropertyToID("_Positions"),
         vectorBufferID = Shader.PropertyToID("_Vectors"),
-        vectorPastBufferID = Shader.PropertyToID("_VectorsPast"),
+        vectorsPastBufferID = Shader.PropertyToID("_VectorsPast"),
         floatArgsID = Shader.PropertyToID("_FloatArgs"),
+        timePastID = Shader.PropertyToID("_TimePast"),
+        timeNowID = Shader.PropertyToID("_TimeNow"),
         timeIntervalID = Shader.PropertyToID("_TimeInterval"),
         vectorArgsID = Shader.PropertyToID("_VectorArgs");
 
@@ -70,7 +72,7 @@ public class VectorField : MonoBehaviour
     /// The possible types of field to display. 
     /// It is the user's responsibility to make sure that these selections align with those in FieldLibrary.hlsl
     /// </summary>
-    public enum FieldType { Outwards, Swirl, Coulomb, Db }
+    public enum FieldType { Outwards, Swirl, Coulomb, Db, Electric}
     /// <summary>
     /// The type of field to be displayed. Cannot be changed in Play Mode if <cref>isDynamic</cref> is set to False.
     /// </summary>
@@ -111,7 +113,7 @@ public class VectorField : MonoBehaviour
 
 
 
-
+    private int frameCount;
 
     private void Awake() {
         if (zone == null) {
@@ -161,10 +163,24 @@ public class VectorField : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         preSetPositions();
         zone.SetPositions();
+        
+        computeShader.SetFloat(timeIntervalID, 3);
+        // Debug.Log("Time is" + Time.deltaTime);
+        
+        //frameCount = Time.frameCount;
 
-        computeShader.SetFloat(timeIntervalID, Time.deltaTime);
+
+        // if (frameCount % 10 == 1){
+        //     computeShader.SetFloat(timePastID, Time.time);
+        //     //computeShader.SetFloat(timeIntervalID, Time.deltaTime);
+        // }
+
+        // if (frameCount % 10 == 0){
+        //     computeShader.SetFloat(timeNowID, Time.time);
+        // }
 
         if (zone.canMove) {
             isDynamic = true;
@@ -208,14 +224,25 @@ public class VectorField : MonoBehaviour
         computeShader.SetBuffer(kernelID, positionsBufferID, positionsBuffer);
         computeShader.SetBuffer(kernelID, vectorBufferID, vectorsBuffer);
         if(floatArgsBuffer != null) {
+            //Debug.Log("floatArgsBuffer");
             computeShader.SetBuffer(kernelID, floatArgsID, floatArgsBuffer);
         }
+        // else{
+        //      Debug.Log("floatArgsBuffer");
+        // }
+
         if(vectorArgsBuffer != null) {
             computeShader.SetBuffer(kernelID, vectorArgsID, vectorArgsBuffer);
         }
         if(kernelID == (int)FieldType.Db){
-            Debug.Log("DbField");
-            computeShader.SetBuffer(kernelID, vectorPastBufferID, vectorsPastBuffer);
+            computeShader.SetBuffer(kernelID, vectorsPastBufferID, vectorsPastBuffer);
+            Vector3[] debugArray = new Vector3[numOfPoints];
+            vectorsBuffer.GetData(debugArray);
+            Debug.Log((("First three points in vector array: " + debugArray[0]) + debugArray[1]) + debugArray[2]);
+            
+            // if (frameCount % 10 == 0){
+            //     computeShader.SetBuffer(kernelID, vectorPastBufferID, vectorsPastBuffer);
+            // }
         }
 
         // This does the math and stores information in the positionsBuffer.

@@ -17,6 +17,7 @@ public class Magnetic : MonoBehaviour
     /// Index 0 is unused, the others are positions of the charges in floatArgs
     /// </summary>
     public ComputeBuffer vectorArgs;
+    
 
     /// <summary>
     /// The <cref>VectorField</cref> generating the displayed field.
@@ -30,9 +31,12 @@ public class Magnetic : MonoBehaviour
     [NonSerialized]
     private float[] floatArray = { 2f, 3f, -3f };
 
+    private Vector3 velocity;
 
     [NonSerialized]
     private Vector3[] vec_array = { new Vector3(0, 0, 0), new Vector3(0, 0, 1), new Vector3(0, 1, 0) };
+
+    private Vector3[] vec_array_past = { new Vector3(0, 0, 0), new Vector3(0, 0, 1), new Vector3(0, 1, 0) };
     // Eventually, these will be set based on a position
 
 
@@ -44,21 +48,33 @@ public class Magnetic : MonoBehaviour
             floatArgs = new ComputeBuffer(3, sizeof(float));
             vectorArgs = new ComputeBuffer(3, sizeof(Vector3));
         }
+
+        vec_array[1] = northPole.transform.position;
+        vec_array[2] = southPole.transform.position;
+
+        // Initialize the ComputeBuffers
+        floatArgs.SetData(floatArray);
+        vectorArgs.SetData(vec_array);
     }
 
     void Update(){
-        
-        
+        vec_array_past[1] = vec_array[1];
+        vec_array_past[2] = vec_array[2];
+
         vec_array[1] = northPole.transform.position;
         vec_array[2] = southPole.transform.position;
 
 
         // Initialize the ComputeBuffers
-        floatArgs.SetData(floatArray);
+        // floatArgs.SetData(floatArray);
         vectorArgs.SetData(vec_array);
 
         // VectorFields will call SetExtraArgs before every calculation.
         field.preCalculations += SetExtraArgs;
+
+        // Print Velocity
+        velocity = (vec_array[1] - vec_array_past[1]) / Time.fixedDeltaTime;
+        Debug.Log("VELOCITY IS " + velocity);
     }
     
     /// <summary>

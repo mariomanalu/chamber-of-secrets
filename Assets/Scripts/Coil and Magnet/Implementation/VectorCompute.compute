@@ -2,6 +2,7 @@
 #pragma kernel SwirlField
 #pragma kernel CoulombField
 #pragma kernel DbField
+#pragma kernel ElectricField
 
 // The buffer storing the positions
 RWStructuredBuffer<float3> _Positions;
@@ -16,6 +17,8 @@ RWStructuredBuffer<float3> _VectorsPast;
 // The (0,0,0) point of the field
 float3 _CenterPosition;
 float _TimeInterval;
+float _TimePast;
+float _TimeNow;
 // These buffers allow you to send additional arguments to whatever your field function is. 
 StructuredBuffer<float> _FloatArgs;
 StructuredBuffer<float3> _VectorArgs;
@@ -52,6 +55,16 @@ void DbField(uint3 id : SV_DispatchThreadID) {
     _Positions.GetDimensions(bufferSize, stride); 
     if (id.x < bufferSize) { 
         _Vectors[id.x] = Db(_Positions[id.x] - _CenterPosition, id.x); 
+        } 
+}
+
+[numthreads(64, 1, 1)] 
+void ElectricField(uint3 id : SV_DispatchThreadID) { 
+    uint bufferSize; 
+    uint stride; 
+    _Positions.GetDimensions(bufferSize, stride); 
+    if (id.x < bufferSize) { 
+        _Vectors[id.x] = Electric(_Positions[id.x] - _CenterPosition, id.x); 
         } 
 }
 
