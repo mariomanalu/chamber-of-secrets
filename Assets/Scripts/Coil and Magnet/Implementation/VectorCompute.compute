@@ -11,7 +11,9 @@ RWStructuredBuffer<float3> _Positions;
 RWStructuredBuffer<float3> _Vectors;
 
 // The buffer storing the value of the vector field at each point in the past
-RWStructuredBuffer<float3> _VectorsPast;
+RWStructuredBuffer<float3> _MagneticFieldPast;
+RWStructuredBuffer<float3> _IntegrandPast;
+RWStructuredBuffer<float3> _Integrand;
 // It's set every frame by the C# script.
 
 // The (0,0,0) point of the field
@@ -19,6 +21,7 @@ float3 _CenterPosition;
 float _TimeInterval;
 float _TimePast;
 float _TimeNow;
+int _NumberOfPoints;
 // These buffers allow you to send additional arguments to whatever your field function is. 
 StructuredBuffer<float> _FloatArgs;
 StructuredBuffer<float3> _VectorArgs;
@@ -51,9 +54,10 @@ StructuredBuffer<float3> _VectorArgs;
 [numthreads(64, 1, 1)] 
 void DbField(uint3 id : SV_DispatchThreadID) { 
     uint bufferSize; 
-    uint stride; 
+    uint stride;
+    
     _Positions.GetDimensions(bufferSize, stride); 
-    if (id.x < bufferSize) { 
+    if (id.x < bufferSize){
         _Vectors[id.x] = Db(_Positions[id.x] - _CenterPosition, id.x); 
         } 
 }

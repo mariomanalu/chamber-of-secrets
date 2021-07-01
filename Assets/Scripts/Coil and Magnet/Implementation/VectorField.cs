@@ -29,7 +29,10 @@ public class VectorField : MonoBehaviour
     /// Same indexing scheme as <cref>positionsBuffer</cref>.
     /// </summary>
     public ComputeBuffer vectorsBuffer { get; protected set; }
-    public ComputeBuffer vectorsPastBuffer { get; protected set; }
+    public ComputeBuffer magneticFieldPastBuffer { get; protected set; }
+
+    public ComputeBuffer integrandPastBuffer { get; protected set; }
+    public ComputeBuffer integrandBuffer { get; protected set; }
     /// <summary>
     /// Stores the extra float arguments used in the computation.
     /// Set your own indexing scheme and initialize by subscribing
@@ -60,11 +63,14 @@ public class VectorField : MonoBehaviour
         centerID = Shader.PropertyToID("_CenterPosition"),
         positionsBufferID = Shader.PropertyToID("_Positions"),
         vectorBufferID = Shader.PropertyToID("_Vectors"),
-        vectorsPastBufferID = Shader.PropertyToID("_VectorsPast"),
+        magneticFieldPastBufferID = Shader.PropertyToID("_MagneticFieldPast"),
+        integrandPastBufferID = Shader.PropertyToID("_IntegrandPast"),
         floatArgsID = Shader.PropertyToID("_FloatArgs"),
         timePastID = Shader.PropertyToID("_TimePast"),
         timeNowID = Shader.PropertyToID("_TimeNow"),
         timeIntervalID = Shader.PropertyToID("_TimeInterval"),
+        numberOfPointsID = Shader.PropertyToID("_NumberOfPoints"),
+        integrandBufferID = Shader.PropertyToID("_Integrand"),
         vectorArgsID = Shader.PropertyToID("_VectorArgs");
 
 
@@ -137,11 +143,13 @@ public class VectorField : MonoBehaviour
 
         positionsBuffer = zone.positionBuffer;
         numOfPoints = positionsBuffer.count;
-
+        computeShader.SetInt(numberOfPointsID, numOfPoints);
         unsafe // <-- This could maybe be a source of problems.
         {
             vectorsBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3)); // last arg: size of single object
-            vectorsPastBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
+            magneticFieldPastBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
+            integrandPastBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
+            integrandBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
         }
 
         
@@ -154,8 +162,14 @@ public class VectorField : MonoBehaviour
         vectorsBuffer.Release();
         vectorsBuffer = null;
 
-        vectorsPastBuffer.Release();
-        vectorsPastBuffer = null;
+        magneticFieldPastBuffer.Release();
+        magneticFieldPastBuffer = null;
+
+        integrandPastBuffer.Release();
+        integrandPastBuffer = null;
+        
+        integrandBuffer.Release();
+        integrandBuffer = null;
     }
 
 
@@ -167,20 +181,8 @@ public class VectorField : MonoBehaviour
         preSetPositions();
         zone.SetPositions();
         
-        computeShader.SetFloat(timeIntervalID, 3);
-        // Debug.Log("Time is" + Time.deltaTime);
+        computeShader.SetFloat(timeIntervalID, Time.smoothDeltaTime);
         
-        //frameCount = Time.frameCount;
-
-
-        // if (frameCount % 10 == 1){
-        //     computeShader.SetFloat(timePastID, Time.time);
-        //     //computeShader.SetFloat(timeIntervalID, Time.deltaTime);
-        // }
-
-        // if (frameCount % 10 == 0){
-        //     computeShader.SetFloat(timeNowID, Time.time);
-        // }
 
         if (zone.canMove) {
             isDynamic = true;
@@ -234,16 +236,37 @@ public class VectorField : MonoBehaviour
         if(vectorArgsBuffer != null) {
             computeShader.SetBuffer(kernelID, vectorArgsID, vectorArgsBuffer);
         }
-        if(kernelID == (int)FieldType.Db){
-            computeShader.SetBuffer(kernelID, vectorsPastBufferID, vectorsPastBuffer);
+        
+        if (magneticFieldPastBuffer != null){
+            computeShader.SetBuffer(kernelID, magneticFieldPastBufferID, magneticFieldPastBuffer);
+        }
+
+        if (integrandPastBuffer != null){
+            computeShader.SetBuffer(kernelID, integrandPastBufferID, integrandPastBuffer);
             Vector3[] debugArray = new Vector3[numOfPoints];
             vectorsBuffer.GetData(debugArray);
-            Debug.Log((("First three points in vector array: " + debugArray[0]) + debugArray[1]) + debugArray[2]);
-            
-            // if (frameCount % 10 == 0){
-            //     computeShader.SetBuffer(kernelID, vectorPastBufferID, vectorsPastBuffer);
-            // }
+            Debug.Log((("First three points in integrandPastBuffer: " + debugArray[0].x) + " " + debugArray[0].y) + " " + debugArray[0].z);
         }
+
+        if (integrandBuffer != null){
+            computeShader.SetBuffer(kernelID, integrandBufferID, integrandBuffer);
+        }
+
+        // if(kernelID == (int)FieldType.Db){
+        //     computeShader.SetBuffer(kernelID, magneticFieldPastBufferID, magneticFieldPastBuffer);
+        //     computeShader.SetBuffer(kernelID, dbDtBufferID, dbDtBuffer);
+        //     Vector3[] debugArray = new Vector3[numOfPoints];
+        //     vectorsBuffer.GetData(debugArray);
+        //     Debug.Log((("First three points in DbDtFieldBuffer: " + debugArray[0].x) + " " + debugArray[0].y) + " " + debugArray[0].z);
+
+        //     Vector3[] debugArray2 = new Vector3[numOfPoints];
+        //     magneticFieldPastBuffer.GetData(debugArray2);
+        //     Debug.Log((("First three points in magneticFieldPASTBuffer: " +  debugArray2[0].x) + " " + debugArray2[0].y) + " " + debugArray2[0].z);
+            
+        //     // if (frameCount % 10 == 0){
+        //     //     computeShader.SetBuffer(kernelID, vectorPastBufferID, vectorsPastBuffer);
+        //     // }
+        // }
 
         // This does the math and stores information in the positionsBuffer.
         int groups = Mathf.CeilToInt(numOfPoints / 64f);
