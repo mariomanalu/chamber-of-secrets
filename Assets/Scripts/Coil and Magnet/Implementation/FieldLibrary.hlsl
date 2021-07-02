@@ -43,7 +43,7 @@ float3 Coulomb(float3 position)
         float distance = sqrt(displacement.x * displacement.x +
                 displacement.y * displacement.y +
                 displacement.z * displacement.z);
-        vect += _FloatArgs[i] / (pow(distance, 3) + 0.0000000001) * displacement;
+        vect += _FloatArgs[i] / (pow(distance, 3)) * displacement;
     }
     //vect.x += numCharges;
     return vect;
@@ -67,15 +67,18 @@ float3 Db(float3 position, int index){
 };
 
 float3 Integrand(float3 position, int index){
-    float3 DbDt = Db(position, index);
-
-    float3 distance = position - _Positions[index];
+    float3 offset = float3(0.05, 0.05, 0.05);
+    float3 DbDt = Db(_Positions[index]+offset, index);
+    
+    
+    float3 distance = position - _Positions[index] - offset;
     float distanceCubed = pow(length(distance), 3);
 
     float3 integrand = cross(DbDt, distance)/distanceCubed;
     return integrand;
 };
 
+// Riemann's sum
 float3 Electric(float3 position, int index){;
 
     // Doing the integrand calculation
@@ -88,15 +91,15 @@ float3 Electric(float3 position, int index){;
     int j;
     float3 resultNow = float3(0.0, 0.0, 0.0);
     for (j = 0; j < _NumberOfPoints; j++){
-        resultNow += _Integrand[j] * 0.0001;
+        resultNow += _Integrand[j] * 0.001 * 1000; // 0.001 is the "volume" and 1000 is the extra scaling factor
     }
 
     resultNow = resultNow * (-1 / (4 * PI));
     float3 weightedResult = (0.1 * resultNow) + (0.90 * _IntegrandPast[index]);
 
-    if (weightedResult.x < 0.1 && weightedResult.y < 0.1 && weightedResult.z < 0.1){
-        weightedResult = float3(0.0, 0.0, 0.0);
-    }
+    // if (weightedResult.x < 0.1 && weightedResult.y < 0.1 && weightedResult.z < 0.1){
+    //     weightedResult = float3(0.0, 0.0, 0.0);
+    // }
     _IntegrandPast[index] = weightedResult;
 
     return weightedResult;
