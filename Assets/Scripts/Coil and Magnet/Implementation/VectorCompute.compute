@@ -22,6 +22,7 @@ float _TimeInterval;
 float _TimePast;
 float _TimeNow;
 int _NumberOfPoints;
+float _Distance;
 // These buffers allow you to send additional arguments to whatever your field function is. 
 StructuredBuffer<float> _FloatArgs;
 StructuredBuffer<float3> _VectorArgs;

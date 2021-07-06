@@ -66,7 +66,7 @@ public class Magnetic : MonoBehaviour
 
 
         // Initialize the ComputeBuffers
-        // floatArgs.SetData(floatArray);
+        floatArgs.SetData(floatArray);
         vectorArgs.SetData(vec_array);
 
         // VectorFields will call SetExtraArgs before every calculation.

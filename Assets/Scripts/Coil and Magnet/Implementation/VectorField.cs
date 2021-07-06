@@ -71,6 +71,7 @@ public class VectorField : MonoBehaviour
         timeIntervalID = Shader.PropertyToID("_TimeInterval"),
         numberOfPointsID = Shader.PropertyToID("_NumberOfPoints"),
         integrandBufferID = Shader.PropertyToID("_Integrand"),
+        distanceID = Shader.PropertyToID("_Distance"),
         vectorArgsID = Shader.PropertyToID("_VectorArgs");
 
 
@@ -224,7 +225,15 @@ public class VectorField : MonoBehaviour
 
         int kernelID = (int)fieldType;
         computeShader.SetBuffer(kernelID, positionsBufferID, positionsBuffer);
+        Vector3[] debugArray = new Vector3[numOfPoints];
+        positionsBuffer.GetData(debugArray);
+        //Debug.Log((("First three points in POSITIONS BUFFER: " + debugArray[60].x) + " " + debugArray[60].y) + " " + debugArray[60].z);
+        
         computeShader.SetBuffer(kernelID, vectorBufferID, vectorsBuffer);
+        Vector3[] debugArray2 = new Vector3[numOfPoints];
+        vectorsBuffer.GetData(debugArray2);
+        Debug.Log((("First three points in OUTWARDS BUFFER: " + debugArray2[60].x) + " " + debugArray2[60].y) + " " + debugArray2[60].z);
+
         if(floatArgsBuffer != null) {
             //Debug.Log("floatArgsBuffer");
             computeShader.SetBuffer(kernelID, floatArgsID, floatArgsBuffer);
@@ -235,17 +244,23 @@ public class VectorField : MonoBehaviour
 
         if(vectorArgsBuffer != null) {
             computeShader.SetBuffer(kernelID, vectorArgsID, vectorArgsBuffer);
+            // Vector3[] debugArray = new Vector3[numOfPoints];
+            // vectorsBuffer.GetData(debugArray);
+            // Debug.Log((("First three points: " + debugArray[615].x) + " " + debugArray[615].y) + " " + debugArray[615].z);
         }
         
         if (magneticFieldPastBuffer != null){
             computeShader.SetBuffer(kernelID, magneticFieldPastBufferID, magneticFieldPastBuffer);
+            // Vector3[] debugArray = new Vector3[numOfPoints];
+            // magneticFieldPastBuffer.GetData(debugArray);
+            // Debug.Log((("First three points: " + debugArray[615].x) + " " + debugArray[615].y) + " " + debugArray[615].z);
         }
 
         if (integrandPastBuffer != null){
             computeShader.SetBuffer(kernelID, integrandPastBufferID, integrandPastBuffer);
-            Vector3[] debugArray = new Vector3[numOfPoints];
-            vectorsBuffer.GetData(debugArray);
-            Debug.Log((("First three points in integrandPastBuffer: " + debugArray[0].x) + " " + debugArray[0].y) + " " + debugArray[0].z);
+            // Vector3[] debugArray = new Vector3[numOfPoints];
+            // vectorsBuffer.GetData(debugArray);
+            // Debug.Log((("First three points in integrandPastBuffer: " + debugArray[0].x) + " " + debugArray[0].y) + " " + debugArray[0].z);
         }
 
         if (integrandBuffer != null){
@@ -254,14 +269,8 @@ public class VectorField : MonoBehaviour
 
         // if(kernelID == (int)FieldType.Db){
         //     computeShader.SetBuffer(kernelID, magneticFieldPastBufferID, magneticFieldPastBuffer);
-        //     computeShader.SetBuffer(kernelID, dbDtBufferID, dbDtBuffer);
-        //     Vector3[] debugArray = new Vector3[numOfPoints];
-        //     vectorsBuffer.GetData(debugArray);
-        //     Debug.Log((("First three points in DbDtFieldBuffer: " + debugArray[0].x) + " " + debugArray[0].y) + " " + debugArray[0].z);
-
-        //     Vector3[] debugArray2 = new Vector3[numOfPoints];
-        //     magneticFieldPastBuffer.GetData(debugArray2);
-        //     Debug.Log((("First three points in magneticFieldPASTBuffer: " +  debugArray2[0].x) + " " + debugArray2[0].y) + " " + debugArray2[0].z);
+            
+            
             
         //     // if (frameCount % 10 == 0){
         //     //     computeShader.SetBuffer(kernelID, vectorPastBufferID, vectorsPastBuffer);

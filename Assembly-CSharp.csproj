@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\Display.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\MoveMagnet.cs" />
      <Compile Include="Assets\Scripts\Museum\SceneSwitch.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\SouthPole.cs" />
      <Compile Include="Assets\Scripts\Museum\Newton.cs" />
@@ -50,7 +51,6 @@
      <Compile Include="Assets\Scripts\Coil and Magnet\NorthPole.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\RectZone.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\VRRig.cs" />
-     <Compile Include="Assets\MoveMagnet.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\computeShader.compute" />

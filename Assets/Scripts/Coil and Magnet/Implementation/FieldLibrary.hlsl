@@ -14,6 +14,8 @@
 #define PI 3.14159265358979323846
 float3 Outwards(float3 position)
 {
+    //return position;
+    //float3 vect = position - (_VectorArgs[1.0] - _CenterPosition);
     return position;
 };
 
@@ -32,21 +34,30 @@ float3 Swirl(float3 position)
 
 float3 Coulomb(float3 position)
 {
-    float3 vect = float3(0.0, 0.0, 0.0);
+    //float3 vect = float3(0.0, 0.0, 0.0);
     // The first argument in _FloatArgs is the number of charges in the system
     float numCharges = _FloatArgs[0]; 
     float i;
-    for (i = 1.0; i < 3.0; i++) // numCharges + 0.0; i++)
-    {
-        // The zeroth index of _VectorArgs is unused so that the two buffers align.
-        float3 displacement = position - _VectorArgs[i] + _CenterPosition;
+    // for (i = 1.0; i < 3.0; i++) // numCharges + 0.0; i++)
+    // {
+    //     // The zeroth index of _VectorArgs is unused so that the two buffers align.
+    //     float3 displacement = position - (_VectorArgs[i] - _CenterPosition);
+    //     float distance = sqrt(displacement.x * displacement.x +
+    //             displacement.y * displacement.y +
+    //             displacement.z * displacement.z);
+    //     vect += _FloatArgs[i] / (pow(distance, 3)) * displacement;
+        
+    // }
+
+     float3 displacement = position - (_VectorArgs[1.0] - _CenterPosition);
         float distance = sqrt(displacement.x * displacement.x +
                 displacement.y * displacement.y +
                 displacement.z * displacement.z);
-        vect += _FloatArgs[i] / (pow(distance, 3)) * displacement;
-    }
-    //vect.x += numCharges;
-    return vect;
+    
+    float3 vect = (_FloatArgs[1.0] / (pow(distance, 3))) * displacement;
+    float3 product = cross(vect, position);
+   
+    return product;
     //return float3(0.0, numCharges, 0.0);
 };
 
@@ -62,9 +73,13 @@ float3 Db(float3 position, int index){
 
     //_DbDtPast[index] = weightedVect;
     
+    // float3 center = float3(-0.138, 1.467, 0.345) + float3(0, 0, 1);
+    // vect = cross(vect, center);
     return vect;
     
 };
+
+
 
 float3 Integrand(float3 position, int index){
     float3 offset = float3(0.05, 0.05, 0.05);
