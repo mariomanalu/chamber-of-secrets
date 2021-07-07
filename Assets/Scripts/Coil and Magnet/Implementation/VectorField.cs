@@ -79,7 +79,7 @@ public class VectorField : MonoBehaviour
     /// The possible types of field to display. 
     /// It is the user's responsibility to make sure that these selections align with those in FieldLibrary.hlsl
     /// </summary>
-    public enum FieldType { Outwards, Swirl, Coulomb, Db, Electric}
+    public enum FieldType { Outwards, Swirl, Coulomb, Db, Integrand, CalculateElectricField}
     /// <summary>
     /// The type of field to be displayed. Cannot be changed in Play Mode if <cref>isDynamic</cref> is set to False.
     /// </summary>
@@ -144,6 +144,7 @@ public class VectorField : MonoBehaviour
 
         positionsBuffer = zone.positionBuffer;
         numOfPoints = positionsBuffer.count;
+        
         computeShader.SetInt(numberOfPointsID, numOfPoints);
         unsafe // <-- This could maybe be a source of problems.
         {
@@ -183,7 +184,7 @@ public class VectorField : MonoBehaviour
         zone.SetPositions();
         
         computeShader.SetFloat(timeIntervalID, Time.smoothDeltaTime);
-        
+        //Debug.Log("THE TIME IS" + Time.smoothDeltaTime);
 
         if (zone.canMove) {
             isDynamic = true;
@@ -230,10 +231,12 @@ public class VectorField : MonoBehaviour
         //Debug.Log((("First three points in POSITIONS BUFFER: " + debugArray[60].x) + " " + debugArray[60].y) + " " + debugArray[60].z);
         
         computeShader.SetBuffer(kernelID, vectorBufferID, vectorsBuffer);
+        
         Vector3[] debugArray2 = new Vector3[numOfPoints];
         vectorsBuffer.GetData(debugArray2);
-        Debug.Log((("First three points in OUTWARDS BUFFER: " + debugArray2[60].x) + " " + debugArray2[60].y) + " " + debugArray2[60].z);
-
+        int index = 100;
+        Debug.Log((("First three points in the BUFFER: " + debugArray2[index].x) + " " + debugArray2[index].y) + " " + debugArray2[index].z);
+        computeShader.SetInt(numberOfPointsID, numOfPoints);
         if(floatArgsBuffer != null) {
             //Debug.Log("floatArgsBuffer");
             computeShader.SetBuffer(kernelID, floatArgsID, floatArgsBuffer);

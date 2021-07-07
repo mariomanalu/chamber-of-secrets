@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Scenes/Coil and Magnet.unity
+    - Assets/Scripts/Coil and Magnet/Implementation/FieldLibrary.hlsl
     - Assets/Scripts/Coil and Magnet/Implementation/MoveMagnet.cs
-    - Assets/Scripts/Coil and Magnet/Implementation/MoveMagnet.cs.meta
+    - Assets/Scripts/Coil and Magnet/Implementation/VectorCompute.compute
+    - Assets/Scripts/Coil and Magnet/Implementation/VectorField.cs
     - 
-    m_Values: 000000
+    m_Values: 000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

@@ -31,7 +31,7 @@ float CalculateMagnitudes(float index) {
 
 float Rescale(float vect_mag) {
 	// Renormalizing...
-    //return .01; //get rid of this
+    //return .00001f; //get rid of this
     return _MaxVectorLength * (1 - 1 / pow(vect_mag + 1, 2)) / (vect_mag + 0.000000001);
 };
 

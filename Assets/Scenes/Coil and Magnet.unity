@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerCollider: {fileID: 0}
   canMove: 0
-  xLength: 11
+  xLength: 2
   yLength: 11
   zLength: 11
   spacing: 0.1
