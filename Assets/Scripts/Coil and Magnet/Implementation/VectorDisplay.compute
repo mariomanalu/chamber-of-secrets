@@ -31,7 +31,6 @@ float CalculateMagnitudes(float index) {
 
 float Rescale(float vect_mag) {
 	// Renormalizing...
-    //return .00001f; //get rid of this
     return _MaxVectorLength * (1 - 1 / pow(vect_mag + 1, 2)) / (vect_mag + 0.000000001);
 };
 
@@ -39,8 +38,6 @@ float Rescale(float vect_mag) {
 void CalculateDisplay(uint3 id : SV_DispatchThreadID) {
     if (id.x < (uint) _NumberOfPoints) {
         int index = id.x;
-        // Insert stuff here to do the weighting / smoothing
-
 
         // First, rescale the vectors for an appropriate display size. 
         _PlotVectors[index] = _Vectors[index] * Rescale(CalculateMagnitudes(index));

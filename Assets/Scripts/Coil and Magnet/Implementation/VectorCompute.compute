@@ -40,8 +40,6 @@ StructuredBuffer<float3> _VectorArgs;
 #include "FieldLibrary.hlsl"
 
 
-
-
 #define KERNEL_NAME(fieldName) \
     [numthreads(64, 1, 1)] \
     void fieldName##Field(uint3 id : SV_DispatchThreadID) { \
@@ -64,26 +62,6 @@ void DbField(uint3 id : SV_DispatchThreadID) {
         } 
 }
 
-// [numthreads(64, 1, 1)] 
-// void IntegrandField(uint3 id : SV_DispatchThreadID) { 
-//     uint bufferSize; 
-//     uint stride;
-    
-//     _Positions.GetDimensions(bufferSize, stride); 
-//     if (id.x < bufferSize){
-//         _Vectors[id.x] = Integrand(_Positions[id.x] - _CenterPosition, id.x); 
-//         } 
-// }
-
-// [numthreads(64, 1, 1)] 
-// void ElectricField(uint3 id : SV_DispatchThreadID) { 
-//     uint bufferSize; 
-//     uint stride; 
-//     _Positions.GetDimensions(bufferSize, stride); 
-//     if (id.x < bufferSize) { 
-//         _Vectors[id.x] = Electric(_Positions[id.x] - _CenterPosition, id.x); 
-//         } 
-// }
 #define PI 3.14159265358979323846
 
 [numthreads(64, 1, 1)] 
@@ -102,15 +80,16 @@ void CalculateElectricField(uint3 id : SV_DispatchThreadID) {
     }
     
     resultNow = resultNow * (-1 / (4 * PI));
-    float3 weightedResult = (0.1 * resultNow) + (0.90 * _IntegrandPast[id.x]);
+    _Vectors[id.x] = resultNow;
+    
+    // WORRY ABOUT THIS LATER
+    //float3 weightedResult = (0.1 * resultNow) + (0.90 * _IntegrandPast[id.x]);
 
     // if (weightedResult.x < 0.1 && weightedResult.y < 0.1 && weightedResult.z < 0.1){
     //     weightedResult = float3(0.0, 0.0, 0.0);
     // }
-    _IntegrandPast[id.x] = weightedResult;
-
-     //_Vectors[id.x] = resultNow;
-     _Vectors[id.x] = weightedResult;
+    // _IntegrandPast[id.x] = weightedResult;
+    // _Vectors[id.x] = weightedResult;
     }
 }
 

@@ -14,8 +14,6 @@
 #define PI 3.14159265358979323846
 float3 Outwards(float3 position, int index)
 {
-    //return position;
-    //float3 vect = position - (_VectorArgs[1.0] - _CenterPosition);
     return position;
 };
 
@@ -52,71 +50,49 @@ float3 Coulomb(float3 position, int index)
     return vect;
 };
 
+// Change in Magnetic Field
 float3 Db(float3 position, int index){
+    // Get the corresponding position of the magnetic field in the past
     float3 fieldPast = _MagneticFieldPast[index];
+    
+    // Calculate the position of the magnetic field now
     float3 field = Coulomb(position, index);
     
-    float3 diff = field - fieldPast;
-    float3 vect =  diff / (_TimeInterval);
+    // Compute the displacement
+    float3 displacement = field - fieldPast;
+
+    // Divide by delta time
+    float3 vect =  displacement / (_TimeInterval);
+
+    // Store the new field at index of _MagneticFieldPast
     _MagneticFieldPast[index] = field;
     
-    // Maybe not necessary
-    // if (vect.z < 0.00001 && vect.z > -0.00001){
-    //     vect.z = 0.0;
-    // }
-   
     return vect;
 };
 
-// PROBLEM HERE IS THAT DISTANCE IS ALWAYS ZERO
-
+// Calculate the integrand for the Maxwell-Faraday Triple Integration 
 float3 Integrand(float3 position, int index){
-    float3 offset = float3(0.0, 0.0, 0.0); // Check if this is necessary in the future
+    // Calculate the DbDt field
     float3 DbDt = Db(_Positions[index] - _CenterPosition, index);
     
-    //return DbDt;
-    float3 distance = position - _Positions[index] + _CenterPosition + offset;
-    if (length(distance) == 0){
-        return offset;
+    // Calculate the distance
+    // THIS IS THE ACTUAL SOURCE OF THE PROBLEM
+    // DISTANCE IS ALMOST ALWAYS ZERO, BUT FOR ANY VECTOR IN ROW 2 AND 10, IT IS NOT ZERO
+    // CHECK THIS TOMORROW
+    float3 distance = position - _Positions[index] + _CenterPosition;
+    
+    // THIS IS TO CHECK TO SEE THAT THE TWO ROWS ARE THE ONLY ROWS THAT ARE NOT ZERO
+    if (length(distance) == 0.0){
+        return float3(100.0, 0.0, 0.0);
     }
+    
+    // Compute the cube of distance
     float distanceCubed = pow(length(distance), 3);
-    //float3 dummy = float3(length(distance.x), length(distance.y), length(distance.z));
-    //return  -_Positions[index] + _CenterPosition;
+    
+    // Compute integrand
     float3 integrand = cross(DbDt, distance)/distanceCubed;
-    // integrand.x = DbDt.y * distance.z - distance.y * DbDt.z;
-    // integrand.y = DbDt.z * distance.x - distance.z * DbDt.x;
-    // integrand.z = DbDt.x * distance.y - distance.x * DbDt.y;
-    //integrand = integrand/distanceCubed;
    
     return integrand;
 };
-
-// Riemann's sum
-// float3 Electric(float3 position, int index){;
-
-//     // Doing the integrand calculation
-//     // int i;
-//     // for (i = 0; i < _NumberOfPoints; i++){
-//     //     _Integrand[i] = Integrand(position, i);
-//     // }
-
-//     // The Riemann sum
-//     int j;
-//     float3 resultNow = float3(0.0, 0.0, 0.0);
-//     for (j = 0; j < _NumberOfPoints; j++){
-//         resultNow += Integrand(position, j) * 0.001 * 1000; // 0.001 is the "volume" and 1000 is the extra scaling factor
-//     }
-
-//     resultNow = resultNow * (-1 / (4 * PI));
-//     //float3 weightedResult = (0.1 * resultNow) + (0.90 * _IntegrandPast[index]);
-
-//     // if (weightedResult.x < 0.1 && weightedResult.y < 0.1 && weightedResult.z < 0.1){
-//     //     weightedResult = float3(0.0, 0.0, 0.0);
-//     // }
-//     //_IntegrandPast[index] = weightedResult;
-
-//     return resultNow;
-    
-// };
 // Every type that's added must also be present in the enum in VectorFields.cs and have a kernel in VectorCompute.compute
 
