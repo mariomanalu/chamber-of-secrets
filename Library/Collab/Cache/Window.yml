@@ -14,9 +14,147 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Building Apartment.meta
+    - Assets/Building Apartment/Mesh.meta
+    - Assets/Building Apartment/Mesh/Building_Apartment_10.fbx
+    - Assets/Building Apartment/Mesh/Building_Apartment_10.fbx.meta
+    - Assets/Building Apartment/Mesh/Building_Apartment_13.fbx
+    - Assets/Building Apartment/Mesh/Building_Apartment_13.fbx.meta
+    - Assets/Building Apartment/Mesh/Materials.meta
+    - Assets/Building Apartment/Mesh/Materials/Building_Apartment_10_2048.mat
+    - Assets/Building Apartment/Mesh/Materials/Building_Apartment_10_2048.mat.meta
+    - Assets/Building Apartment/Mesh/Materials/Building_Apartment_13.mat
+    - Assets/Building Apartment/Mesh/Materials/Building_Apartment_13.mat.meta
+    - Assets/Building Apartment/Mesh/Materials/Building_Apartment_14.mat
+    - Assets/Building Apartment/Mesh/Materials/Building_Apartment_14.mat.meta
+    - Assets/Building Apartment/Prefab.meta
+    - Assets/Building Apartment/Prefab/Building_Apartment_10.prefab
+    - Assets/Building Apartment/Prefab/Building_Apartment_10.prefab.meta
+    - Assets/Building Apartment/Prefab/Building_Apartment_13.prefab
+    - Assets/Building Apartment/Prefab/Building_Apartment_13.prefab.meta
+    - Assets/Building Apartment/Scene.meta
+    - Assets/Building Apartment/Scene/building apartment.unity
+    - Assets/Building Apartment/Scene/building apartment.unity.meta
+    - Assets/Building Apartment/Scene/building apartmentSettings.lighting
+    - Assets/Building Apartment/Scene/building apartmentSettings.lighting.meta
+    - Assets/Building Apartment/Texture.meta
+    - Assets/Building Apartment/Texture/Building_Apartment_10.png
+    - Assets/Building Apartment/Texture/Building_Apartment_10.png.meta
+    - Assets/Building Apartment/Texture/Building_Apartment_13.png
+    - Assets/Building Apartment/Texture/Building_Apartment_13.png.meta
+    - Assets/Building.meta
+    - Assets/Dinner table.meta
+    - Assets/Dinner table/Materials.meta
+    - Assets/Dinner table/Materials/Chair.mat
+    - Assets/Dinner table/Materials/Chair.mat.meta
+    - Assets/Dinner table/Materials/Chicken.mat
+    - Assets/Dinner table/Materials/Chicken.mat.meta
+    - Assets/Dinner table/Materials/Plate.mat
+    - Assets/Dinner table/Materials/Plate.mat.meta
+    - Assets/Dinner table/Materials/Table.mat
+    - Assets/Dinner table/Materials/Table.mat.meta
+    - Assets/Dinner table/Materials/Tablecloth.mat
+    - Assets/Dinner table/Materials/Tablecloth.mat.meta
+    - Assets/Dinner table/Models.meta
+    - Assets/Dinner table/Models/Chair.FBX
+    - Assets/Dinner table/Models/Chair.FBX.meta
+    - Assets/Dinner table/Models/Chicken_2.FBX
+    - Assets/Dinner table/Models/Chicken_2.FBX.meta
+    - Assets/Dinner table/Models/Plate.FBX
+    - Assets/Dinner table/Models/Plate.FBX.meta
+    - Assets/Dinner table/Models/Table.FBX
+    - Assets/Dinner table/Models/Table.FBX.meta
+    - Assets/Dinner table/Models/Tablecloth.FBX
+    - Assets/Dinner table/Models/Tablecloth.FBX.meta
+    - Assets/Dinner table/Scene_1.unity
+    - Assets/Dinner table/Scene_1.unity.meta
+    - Assets/Dinner table/Scene_1Settings.lighting
+    - Assets/Dinner table/Scene_1Settings.lighting.meta
+    - Assets/Dinner table/Textures.meta
+    - Assets/Dinner table/Textures/Chair_texture.tif
+    - Assets/Dinner table/Textures/Chair_texture.tif.meta
+    - Assets/Dinner table/Textures/Chicken_normal.tif
+    - Assets/Dinner table/Textures/Chicken_normal.tif.meta
+    - Assets/Dinner table/Textures/Chicken_specular.tif
+    - Assets/Dinner table/Textures/Chicken_specular.tif.meta
+    - Assets/Dinner table/Textures/Chicken_texture.tif
+    - Assets/Dinner table/Textures/Chicken_texture.tif.meta
+    - Assets/Dinner table/Textures/Plate_texture.tif
+    - Assets/Dinner table/Textures/Plate_texture.tif.meta
+    - Assets/Dinner table/Textures/Table_normal.tif
+    - Assets/Dinner table/Textures/Table_normal.tif.meta
+    - Assets/Dinner table/Textures/Table_specular.tif
+    - Assets/Dinner table/Textures/Table_specular.tif.meta
+    - Assets/Dinner table/Textures/Table_texture.tif
+    - Assets/Dinner table/Textures/Table_texture.tif.meta
+    - Assets/Dinner table/Textures/Tablecloth_blue_texture.tif
+    - Assets/Dinner table/Textures/Tablecloth_blue_texture.tif.meta
+    - Assets/Dinner table/Textures/Tablecloth_specular.tif
+    - Assets/Dinner table/Textures/Tablecloth_specular.tif.meta
+    - Assets/Materials/Coil.meta
+    - Assets/Materials/Coil/Coil.mat
+    - Assets/Materials/Coil/Coil.mat.meta
+    - Assets/Materials/Coil/coil.fbx
+    - Assets/Materials/Coil/coil.fbx.meta
+    - Assets/Materials/Experiment Pictures.meta
+    - Assets/Materials/Experiment Pictures/1.jpeg
+    - Assets/Materials/Experiment Pictures/1.jpeg.meta
+    - Assets/Materials/Experiment Pictures/2.jpeg
+    - Assets/Materials/Experiment Pictures/2.jpeg.meta
+    - Assets/Materials/Experiment Pictures/3.jpeg
+    - Assets/Materials/Experiment Pictures/3.jpeg.meta
+    - Assets/Materials/Experiment Pictures/4.jpeg
+    - Assets/Materials/Experiment Pictures/4.jpeg.meta
+    - Assets/Materials/Experiment Pictures/5.jpeg
+    - Assets/Materials/Experiment Pictures/5.jpeg.meta
+    - Assets/Materials/Experiment Pictures/copper.jpg
+    - Assets/Materials/Experiment Pictures/copper.jpg.meta
+    - Assets/Materials/Experiment Pictures/image.png
+    - Assets/Materials/Experiment Pictures/image.png.meta
+    - Assets/Materials/Magnet/Magnet.prefab
+    - Assets/Materials/Magnet/Magnet.prefab.meta
+    - Assets/Materials/Other Stuff.meta
+    - Assets/Materials/Other Stuff/Red Line.mat
+    - Assets/Materials/Other Stuff/Red Line.mat.meta
+    - Assets/Materials/Other Stuff/newton.jpg
+    - Assets/Materials/Other Stuff/newton.jpg.meta
+    - Assets/Materials/Pictures/Ampere.jpg
+    - Assets/Materials/Pictures/Ampere.jpg.meta
+    - Assets/Materials/Pictures/Faraday.jpeg
+    - Assets/Materials/Pictures/Faraday.jpeg.meta
+    - Assets/Materials/Pictures/Head Stand.mat
+    - Assets/Materials/Pictures/Head Stand.mat.meta
+    - Assets/Materials/Pictures/Maxwell.jpg
+    - Assets/Materials/Pictures/Maxwell.jpg.meta
+    - Assets/Materials/Pictures/Oersted.jpg
+    - Assets/Materials/Pictures/Oersted.jpg.meta
+    - Assets/Materials/Pictures/newton.jpg
+    - Assets/Materials/Pictures/newton.jpg.meta
+    - Assets/Robot Kyle.meta
+    - Assets/Robot Kyle/Materials.meta
+    - Assets/Robot Kyle/Materials/Robot_Color.mat
+    - Assets/Robot Kyle/Materials/Robot_Color.mat.meta
+    - Assets/Robot Kyle/Model.meta
+    - Assets/Robot Kyle/Model/Robot Kyle.fbx
+    - Assets/Robot Kyle/Model/Robot Kyle.fbx.meta
+    - Assets/Robot Kyle/Textures.meta
+    - Assets/Robot Kyle/Textures/Robot_Color.tga
+    - Assets/Robot Kyle/Textures/Robot_Color.tga.meta
+    - Assets/Robot Kyle/Textures/Robot_Normal.tga
+    - Assets/Robot Kyle/Textures/Robot_Normal.tga.meta
+    - Assets/Scenes/Chamber.unity
     - Assets/Scenes/Coil and Magnet.unity
+    - Assets/Scenes/Front.unity
+    - Assets/Scenes/Front.unity.meta
+    - Assets/Scenes/Museum.unity
+    - Assets/Scenes/Museum.unity.meta
+    - Assets/Scripts/Coil and Magnet/Implementation/FieldLibrary.hlsl
+    - Assets/Scripts/Coil and Magnet/Implementation/Magnetic.cs
     - Assets/Scripts/Coil and Magnet/Implementation/MoveMagnet.cs
+    - Assets/Scripts/Coil and Magnet/Implementation/MoveMagnet.cs.meta
     - Assets/Scripts/Coil and Magnet/Implementation/VectorCompute.compute
+    - Assets/Scripts/Coil and Magnet/Implementation/VectorDisplay.compute
+    - Assets/Scripts/Coil and Magnet/Implementation/VectorField.cs
     - Assets/_Barking_Dog.meta
     - Assets/_Barking_Dog/3D Free Modular Kit.meta
     - Assets/_Barking_Dog/3D Free Modular Kit/Camera Profile.asset
@@ -134,7 +272,7 @@ MonoBehaviour:
     - Assets/_Barking_Dog/Readme_Please.txt
     - Assets/_Barking_Dog/Readme_Please.txt.meta
     - 
-    m_Values: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    m_Values: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
