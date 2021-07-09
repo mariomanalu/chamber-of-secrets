@@ -82,8 +82,8 @@ float3 Integrand(float3 position, int index){
     float3 distance = position - _Positions[index] + _CenterPosition;
     
     // THIS IS TO CHECK TO SEE THAT THE TWO ROWS ARE THE ONLY ROWS THAT ARE NOT ZERO
-    if (length(distance) == 0.0){
-        return float3(100.0, 0.0, 0.0);
+    if (length(distance) < 0.0001){
+        return float3(0.0, 0.0, 0.0);
     }
     
     // Compute the cube of distance

@@ -15,12 +15,126 @@ MonoBehaviour:
   SimpleSelectedItems:
     m_Keys:
     - Assets/Scenes/Coil and Magnet.unity
-    - Assets/Scripts/Coil and Magnet/Implementation/FieldLibrary.hlsl
-    - Assets/Scripts/Coil and Magnet/Implementation/Magnetic.cs
-    - Assets/Scripts/Coil and Magnet/Implementation/VectorDisplay.compute
-    - Assets/Scripts/Coil and Magnet/Implementation/VectorField.cs
+    - Assets/Scripts/Coil and Magnet/Implementation/MoveMagnet.cs
+    - Assets/Scripts/Coil and Magnet/Implementation/VectorCompute.compute
+    - Assets/_Barking_Dog.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/Camera Profile.asset
+    - Assets/_Barking_Dog/3D Free Modular Kit/Camera Profile.asset.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/Test_Map.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/Test_Map.unity
+    - Assets/_Barking_Dog/3D Free Modular Kit/Test_Map.unity.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/Test_Map/LightingData.asset
+    - Assets/_Barking_Dog/3D Free Modular Kit/Test_Map/LightingData.asset.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/Test_MapSettings.lighting
+    - Assets/_Barking_Dog/3D Free Modular Kit/Test_MapSettings.lighting.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Column_01_Top.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Column_01_Top.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Door_Arch_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Door_Arch_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Door_Left_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Door_Left_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Fan_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Fan_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Floor_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Floor_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Floor_Small_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Floor_Small_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Light_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Light_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Materials.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Materials/Diffuse_01.mat
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Materials/Diffuse_01.mat.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Materials/Glass.mat
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Materials/Glass.mat.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Materials/Neon_01.mat
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Materials/Neon_01.mat.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Angle_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Angle_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Angle_Large_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Angle_Large_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Angle_Smal_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Angle_Smal_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Door_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Door_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_Arc_90_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_Arc_90_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_Arc_90_02.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_Arc_90_02.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_HalfArc_90_02.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_HalfArc_90_02.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_HalfArc_90_03.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_HalfArc_90_03.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_Simple_01.FBX
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_Simple_01.FBX.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Column_01_Top.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Column_01_Top.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Door_Arch_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Door_Arch_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Door_Left_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Door_Left_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Fan_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Fan_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Floor_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Floor_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Floor_Small_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Floor_Small_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Light_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Light_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_02.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_02.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Angle_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Angle_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Angle_Large_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Angle_Large_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Angle_Smal_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Angle_Smal_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Door_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Door_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Room_Big_Part_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Room_Big_Part_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Room_Big_Part_02.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Room_Big_Part_02.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Room_Big_Part_03.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Room_Big_Part_03.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Room_Big_Part_04.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Room_Big_Part_04.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_Arc_90_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_Arc_90_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_Arc_90_02.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_Arc_90_02.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_HalfArc_90_02.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_HalfArc_90_02.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_HalfArc_90_03.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_HalfArc_90_03.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_Simple_01.prefab
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_Simple_01.prefab.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Textures.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Ambient_01.png
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Ambient_01.png.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Diffuse_01.png
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Diffuse_01.png.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Metal_01.tif
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Metal_01.tif.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Neon.png
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Neon.png.meta
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Normal_01.png
+    - Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Normal_01.png.meta
+    - Assets/_Barking_Dog/Common Scripts.meta
+    - Assets/_Barking_Dog/Common Scripts/MouseLook.cs
+    - Assets/_Barking_Dog/Common Scripts/MouseLook.cs.meta
+    - Assets/_Barking_Dog/Common Scripts/Turn_Move.cs
+    - Assets/_Barking_Dog/Common Scripts/Turn_Move.cs.meta
+    - Assets/_Barking_Dog/Readme_Please.txt
+    - Assets/_Barking_Dog/Readme_Please.txt.meta
     - 
-    m_Values: 000000000000
+    m_Values: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

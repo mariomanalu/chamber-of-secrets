@@ -9,6 +9,6 @@ public class MoveMagnet : MonoBehaviour
     void Update()
     {  
        
-        transform.position = new Vector3(Mathf.Cos(Mathf.PI  * Time.time * .1f) - .138f, 1.467f, -0.155f+0.5f);
+        transform.position = new Vector3(2 * Mathf.Cos(Mathf.PI  * Time.time * .1f) - .138f, 1.467f, -0.155f+0.5f);
     }
 }
