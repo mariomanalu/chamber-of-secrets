@@ -11,15 +11,15 @@
 //      in VectorFields.cs. MAKE SURE that the order of this list is the same as the
 //      order of the lines at the top of VectorCompute.compute. 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-float3 Outwards(float3 position)
+#define PI 3.14159265358979323846
+float3 Outwards(float3 position, int index)
 {
     return position;
 };
 
 
 
-float3 Swirl(float3 position)
+float3 Swirl(float3 position, int index)
 {
     float3 val;
     val.x = -position.z;
@@ -30,7 +30,7 @@ float3 Swirl(float3 position)
 
 
 
-float3 Coulomb(float3 position)
+float3 Coulomb(float3 position, int index)
 {
     float3 vect = float3(0.0, 0.0, 0.0);
     // The first argument in _FloatArgs is the number of charges in the system
@@ -39,56 +39,60 @@ float3 Coulomb(float3 position)
     for (i = 1.0; i < 3.0; i++) // numCharges + 0.0; i++)
     {
         // The zeroth index of _VectorArgs is unused so that the two buffers align.
-        float3 displacement = position - _VectorArgs[i] + _CenterPosition;
+        float3 displacement = position - (_VectorArgs[i] - _CenterPosition);
         float distance = sqrt(displacement.x * displacement.x +
                 displacement.y * displacement.y +
                 displacement.z * displacement.z);
-        vect += _FloatArgs[i] / (pow(distance, 3) + 0.0000000001) * displacement;
+        vect += _FloatArgs[i] / (pow(distance, 3)) * displacement;
+        
     }
-    //vect.x += numCharges;
-    return vect;
-    //return float3(0.0, numCharges, 0.0);
-};
-
-float3 Db(float3 position, int index){
-    float3 field = Coulomb(position);
-    float3 fieldPast = _VectorsPast[index];
-    float3 vect = float3(0.0, 0.0, 0.0);
-
-    // vect =  (field - fieldPast) / (_TimeInterval);
-    // _VectorsPast[index] = field;
-    
-    if (dot(field-fieldPast, field-fieldPast)){
-        vect =  (field - fieldPast) / (_TimeInterval);
-        _VectorsPast[index] = field;
-        vect.x = vect.x /10;
-        vect.y = vect.y /10;
-        vect.z = vect.z /10;
-    }
-    else{
-        vect = _Vectors[index];
-    }
-
-
    
     return vect;
-    //return vect;
-}
+};
 
-float3 Electric(float3 position, int index){
-    float3 DbDt = Db(position, index);
-
-    float3 velocity = float3(-1,-1,-1);
-    float3 vect = float3(0.0, 0.0, 0.0);
-    float x = velocity.y * DbDt.z - DbDt.y * velocity.z;
-    float y = (velocity.x * DbDt.z - DbDt.x * velocity.z) * -1;
-    float z = velocity.x * DbDt.y - DbDt.x * velocity.y;
-
-    vect.x = x;
-    vect.y = y;
-    vect.z = z;
-    return vect;
+// Change in Magnetic Field
+float3 Db(float3 position, int index){
+    // Get the corresponding position of the magnetic field in the past
+    float3 fieldPast = _MagneticFieldPast[index];
     
-}
+    // Calculate the position of the magnetic field now
+    float3 field = Coulomb(position, index);
+    
+    // Compute the displacement
+    float3 displacement = field - fieldPast;
+
+    // Divide by delta time
+    float3 vect =  displacement / (_TimeInterval);
+
+    // Store the new field at index of _MagneticFieldPast
+    _MagneticFieldPast[index] = field;
+    
+    return vect;
+};
+
+// Calculate the integrand for the Maxwell-Faraday Triple Integration 
+float3 Integrand(float3 position, int index){
+    // Calculate the DbDt field
+    float3 DbDt = Db(_Positions[index] - _CenterPosition, index);
+    
+    // Calculate the distance
+    // THIS IS THE ACTUAL SOURCE OF THE PROBLEM
+    // DISTANCE IS ALMOST ALWAYS ZERO, BUT FOR ANY VECTOR IN ROW 2 AND 10, IT IS NOT ZERO
+    // CHECK THIS TOMORROW
+    float3 distance = position - _Positions[index] + _CenterPosition;
+    
+    // THIS IS TO CHECK TO SEE THAT THE TWO ROWS ARE THE ONLY ROWS THAT ARE NOT ZERO
+    if (length(distance) < 0.0001){
+        return float3(0.0, 0.0, 0.0);
+    }
+    
+    // Compute the cube of distance
+    float distanceCubed = pow(length(distance), 3);
+    
+    // Compute integrand
+    float3 integrand = cross(DbDt, distance)/distanceCubed;
+   
+    return integrand;
+};
 // Every type that's added must also be present in the enum in VectorFields.cs and have a kernel in VectorCompute.compute
 

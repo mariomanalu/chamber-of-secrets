@@ -66,7 +66,7 @@ public class Magnetic : MonoBehaviour
 
 
         // Initialize the ComputeBuffers
-        // floatArgs.SetData(floatArray);
+        floatArgs.SetData(floatArray);
         vectorArgs.SetData(vec_array);
 
         // VectorFields will call SetExtraArgs before every calculation.
@@ -74,7 +74,7 @@ public class Magnetic : MonoBehaviour
 
         // Print Velocity
         velocity = (vec_array[1] - vec_array_past[1]) / Time.fixedDeltaTime;
-        Debug.Log("VELOCITY IS " + velocity);
+        //Debug.Log("VELOCITY IS " + velocity);
     }
     
     /// <summary>
