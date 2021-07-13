@@ -255,6 +255,8 @@ m_PackageAssets:
         - 1.3.9
         - 1.4.9
         - 1.5.7
+        - 1.6.0
+        - 1.7.1
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -267,6 +269,7 @@ m_PackageAssets:
         - 2.1.0-preview.6
         compatible:
         - 1.5.7
+        - 1.6.0
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -458,6 +461,7 @@ m_PackageAssets:
         - 2.0.7
         - 2.0.8
         - 2.0.9
+        - 2.0.11
         compatible:
         - 1.0.2
         - 1.0.3
@@ -473,7 +477,8 @@ m_PackageAssets:
         - 2.0.7
         - 2.0.8
         - 2.0.9
-        verified: 2.0.9
+        - 2.0.11
+        verified: 2.0.11
       dependencies:
       - name: com.unity.test-framework
         version: 1.1.9
@@ -636,6 +641,7 @@ m_PackageAssets:
         - 2.0.0-pre.4
         - 2.0.0-pre.5
         - 2.0.0-pre.6
+        - 2.0.0
         compatible:
         - 0.1.4-preview
         - 0.1.8-preview
@@ -675,6 +681,7 @@ m_PackageAssets:
         - 2.0.0-pre.4
         - 2.0.0-pre.5
         - 2.0.0-pre.6
+        - 2.0.0
         verified: 
       dependencies:
       - name: com.unity.editorcoroutines
@@ -855,6 +862,7 @@ m_PackageAssets:
         - 4.4.0-preview.1
         - 4.4.0
         - 4.5.0
+        - 4.5.2
         - 5.0.0-pre.7
         - 5.0.0-pre.10
         - 5.0.1
@@ -883,11 +891,12 @@ m_PackageAssets:
         - 4.4.0-preview.1
         - 4.4.0
         - 4.5.0
+        - 4.5.2
         - 5.0.0-pre.7
         - 5.0.0-pre.10
         - 5.0.1
         - 5.0.3
-        verified: 4.5.0
+        verified: 4.5.2
       dependencies:
       - name: com.unity.settings-manager
         version: 1.0.3
@@ -1261,6 +1270,7 @@ m_PackageAssets:
         - 1.5.2
         - 1.5.4
         - 1.5.5
+        - 1.5.6
         - 1.6.0-pre.1
         - 1.6.0-pre.3
         - 1.6.0-pre.4
@@ -1280,6 +1290,7 @@ m_PackageAssets:
         - 1.5.2
         - 1.5.4
         - 1.5.5
+        - 1.5.6
         - 1.6.0-pre.1
         - 1.6.0-pre.3
         - 1.6.0-pre.4
@@ -1561,12 +1572,14 @@ m_PackageAssets:
         - 4.0.3
         - 4.0.5
         - 4.0.6
+        - 4.0.7
         compatible:
         - 4.0.1
         - 4.0.3
         - 4.0.5
         - 4.0.6
-        verified: 4.0.6
+        - 4.0.7
+        verified: 4.0.7
       dependencies:
       - name: com.unity.modules.subsystems
         version: 1.0.0

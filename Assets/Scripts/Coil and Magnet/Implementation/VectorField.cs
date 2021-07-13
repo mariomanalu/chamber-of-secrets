@@ -231,8 +231,8 @@ public class VectorField : MonoBehaviour
         //         Debug.Log((("At " + i + ": "+ debugArray[i].x) + " " + debugArray[i].y) + " " + debugArray[i].z);
         //     }
         // }
-        int i = 650;
-        Debug.Log((("At " + i + ": "+ debugArray[i].x) + " " + debugArray[i].y) + " " + debugArray[i].z);
+        //int i = 650;
+        //Debug.Log((("At " + i + ": "+ debugArray[i].x) + " " + debugArray[i].y) + " " + debugArray[i].z);
         //Debug.Log((("Second Index: " + debugArray[index2].x) + " " + debugArray[index2].y) + " " + debugArray[index2].z);
         // DEBUG CODE
         
