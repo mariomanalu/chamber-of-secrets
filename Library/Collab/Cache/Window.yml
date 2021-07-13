@@ -13,53 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
-    m_Keys:
-    - Assets/Characters.meta
-    - Assets/Characters/Animation.meta
-    - Assets/Characters/Animation/xbot@Acknowledging.fbx
-    - Assets/Characters/Animation/xbot@Acknowledging.fbx.meta
-    - Assets/Characters/Animation/xbot@Breathing Idle.fbx
-    - Assets/Characters/Animation/xbot@Breathing Idle.fbx.meta
-    - Assets/Characters/Animation/xbot@Laughing.fbx
-    - Assets/Characters/Animation/xbot@Laughing.fbx.meta
-    - Assets/Characters/Animation/xbot@Talking (1).fbx
-    - Assets/Characters/Animation/xbot@Talking (1).fbx.meta
-    - Assets/Characters/Animation/xbot@Talking.fbx
-    - Assets/Characters/Animation/xbot@Talking.fbx.meta
-    - Assets/Characters/Animation/xbot@Thinking.fbx
-    - Assets/Characters/Animation/xbot@Thinking.fbx.meta
-    - Assets/Characters/Animation/xbot@Walking.fbx
-    - Assets/Characters/Animation/xbot@Walking.fbx.meta
-    - Assets/Characters/Einstein.meta
-    - Assets/Characters/Einstein/Albert Controller.controller
-    - Assets/Characters/Einstein/Albert Controller.controller.meta
-    - Assets/Characters/Einstein/Albert_E Material.mat
-    - Assets/Characters/Einstein/Albert_E Material.mat.meta
-    - Assets/Characters/Einstein/Albert_E.fbx
-    - Assets/Characters/Einstein/Albert_E.fbx.meta
-    - Assets/Characters/Einstein/Albert_Tex.png
-    - Assets/Characters/Einstein/Albert_Tex.png.meta
-    - Assets/Characters/Newton.meta
-    - Assets/Characters/Newton/Isaac_Newton Material.mat
-    - Assets/Characters/Newton/Isaac_Newton Material.mat.meta
-    - Assets/Characters/Newton/Isaac_Newton.fbx
-    - Assets/Characters/Newton/Isaac_Newton.fbx.meta
-    - Assets/Characters/Newton/Isaac_Tex.png
-    - Assets/Characters/Newton/Isaac_Tex.png.meta
-    - Assets/Characters/Newton/Newton Controller.controller
-    - Assets/Characters/Newton/Newton Controller.controller.meta
-    - Assets/Objects/texture.tif
-    - Assets/Objects/texture.tif.meta
-    - Assets/Scenes/Chamber.unity
-    - Assets/Scenes/Chamber.unity.meta
-    - Assets/Scenes/Coil and Magnet.unity
-    - Assets/Scripts/Museum.meta
-    - Assets/Scripts/Museum/Newton.cs
-    - Assets/Scripts/Museum/Newton.cs.meta
-    - Assets/Scripts/Museum/SceneSwitch.cs
-    - Assets/Scripts/Museum/SceneSwitch.cs.meta
-    - 
-    m_Values: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    m_Keys: []
+    m_Values: 
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
