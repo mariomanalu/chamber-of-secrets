@@ -43,6 +43,7 @@
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\FieldZone.cs" />
      <Compile Include="Assets\Hands\HandMotion.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorField.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\UI Scripts\SideButton.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\FieldDetector.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\Magnetic.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorDisplay.cs" />
@@ -50,9 +51,8 @@
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\RectZone.cs" />
      <Compile Include="Assets\_Barking_Dog\Common Scripts\Turn_Move.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\VRRig.cs" />
-     <Compile Include="Assets\Scripts\Coil and Magnet\GUIPanel.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\UI Scripts\GUIPanel.cs" />
      <Compile Include="Assets\_Barking_Dog\Common Scripts\MouseLook.cs" />
-     <Compile Include="Assets\Scripts\Coil and Magnet\Button1.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\computeShader.compute" />
