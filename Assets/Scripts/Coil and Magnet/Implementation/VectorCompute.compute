@@ -77,21 +77,18 @@ void CalculateElectricField(uint3 id : SV_DispatchThreadID) {
         int j;
         float3 resultNow = float3(0.0, 0.0, 0.0);
         for (j = 0; j < _NumberOfPoints; j++){
-            float3 displacement = _Positions[id.x] - _CenterPosition - _Positions[j];
-            if (length(displacement) != 0){
-                resultNow += (cross(_DbArray[id.x], displacement) / length(displacement));
+            float3 displacement = _Positions[id.x] - _Positions[j];
+            if (length(displacement) >.0000001){
+                resultNow += (cross(_DbArray[j], displacement)) / pow(length(displacement),3);
             }
         }
         
-        resultNow = resultNow * (-1 / (4 * PI));
+        resultNow = resultNow * (-1 / (4 * PI)) * 0.01; // 0.01 is to scale down the vectors
         //_Vectors[id.x] = resultNow;
         
         //WORRY ABOUT THIS LATER
-        float3 weightedResult = (0.1 * resultNow) + (0.90 * _IntegrandPast[id.x]);
+        float3 weightedResult = (0.9 * resultNow) + (0.1 * _IntegrandPast[id.x]);
 
-        if (weightedResult.x < 0.1 && weightedResult.y < 0.1 && weightedResult.z < 0.1){
-            weightedResult = float3(0.0, 0.0, 0.0);
-        }
         _IntegrandPast[id.x] = weightedResult;
         _Vectors[id.x] = weightedResult;
         }

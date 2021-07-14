@@ -230,18 +230,6 @@ public class VectorField : MonoBehaviour
         // DEBUG CODE
         Vector3[] debugArray = new Vector3[numOfPoints];
         vectorsBuffer.GetData(debugArray);
-        // int index = 665; // POsition (0,0,2)
-        // int index2 = 1209; // Position (0,0,9)
-        // for (int i = 0; i < numOfPoints; i++){
-        //     if (debugArray[i].y > 10000000){
-        //         Debug.Log((("At " + i + ": "+ debugArray[i].x) + " " + debugArray[i].y) + " " + debugArray[i].z);
-        //     }
-        // }
-        //int i = 650;
-        //Debug.Log((("At " + i + ": "+ debugArray[i].x) + " " + debugArray[i].y) + " " + debugArray[i].z);
-        //Debug.Log((("Second Index: " + debugArray[index2].x) + " " + debugArray[index2].y) + " " + debugArray[index2].z);
-        // DEBUG CODE
-        
         
         if(floatArgsBuffer != null) {
             computeShader.SetBuffer(kernelID, floatArgsID, floatArgsBuffer);

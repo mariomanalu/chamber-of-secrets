@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 public class GUIPanel : MonoBehaviour
 {
@@ -8,6 +9,34 @@ public class GUIPanel : MonoBehaviour
     TextMeshProUGUI display;
     [SerializeField]
     VectorField field;
+    [SerializeField]
+    GameObject magnet;
+    [SerializeField]
+    Slider slider;
+    public void PlayMagnet()
+    {   
+        if (magnet.GetComponent<MoveMagnet>().enabled == false){
+            magnet.GetComponent<MoveMagnet>().enabled = true;
+        }
+    }
+
+    public void PauseMagnet()
+    {
+        if(magnet.GetComponent<MoveMagnet>().enabled == true)
+        {
+            Vector3 position = magnet.transform.position;
+            magnet.GetComponent<MoveMagnet>().enabled = false;
+            magnet.transform.position = position;
+            slider.value = position.x;
+        }
+    }
+
+    public void MoveMagnet()
+    {
+        if(magnet.GetComponent<MoveMagnet>().enabled == false){
+            magnet.transform.position = new Vector3(2 * Mathf.Cos(Mathf.PI  * slider.value * .1f) - .138f, 1.467f, -0.155f+0.5f);
+        }   
+    }
 
     void Update(){
         int identifier = (int)(field.fieldType);
