@@ -12,6 +12,7 @@ RWStructuredBuffer<float3> _Positions;
 RWStructuredBuffer<float3> _Vectors;
 
 // The buffer storing the value of the vector field at each point in the past
+RWStructuredBuffer<float3> _DbArray;
 RWStructuredBuffer<float3> _MagneticFieldPast;
 RWStructuredBuffer<float3> _IntegrandPast;
 RWStructuredBuffer<float3> _Integrand;
@@ -71,31 +72,30 @@ void CalculateElectricField(uint3 id : SV_DispatchThreadID) {
     
     _Positions.GetDimensions(bufferSize, stride); 
     if (id.x < bufferSize){
+        Db(_Positions[id.x] - _CenterPosition, id.x);
+        // The Riemann sum
+        int j;
+        float3 resultNow = float3(0.0, 0.0, 0.0);
+        for (j = 0; j < _NumberOfPoints; j++){
+            float3 displacement = _Positions[id.x] - _CenterPosition - _Positions[j];
+            if (length(displacement) != 0){
+                resultNow += (cross(_DbArray[id.x], displacement) / length(displacement));
+            }
+        }
+        
+        resultNow = resultNow * (-1 / (4 * PI));
+        //_Vectors[id.x] = resultNow;
+        
+        //WORRY ABOUT THIS LATER
+        float3 weightedResult = (0.1 * resultNow) + (0.90 * _IntegrandPast[id.x]);
 
-        float3 v = float3(-2.0, -2.0, -2.0);
-        _Vectors[id.x] = cross(v, Coulomb(_Positions[id.x] - _CenterPosition, id.x));
-    }
+        if (weightedResult.x < 0.1 && weightedResult.y < 0.1 && weightedResult.z < 0.1){
+            weightedResult = float3(0.0, 0.0, 0.0);
+        }
+        _IntegrandPast[id.x] = weightedResult;
+        _Vectors[id.x] = weightedResult;
+        }
 }
-//     // The Riemann sum
-//     int j;
-//     float3 resultNow = float3(0.0, 0.0, 0.0);
-//     for (j = 0; j < _NumberOfPoints; j++){
-//         resultNow += Integrand(_Positions[id.x] - _CenterPosition, j) * 0.001 * 1000; // 0.001 is the "volume" and 1000 is the extra scaling factor
-//     }
-    
-//     resultNow = resultNow * (-1 / (4 * PI));
-//     //_Vectors[id.x] = resultNow;
-    
-//     //WORRY ABOUT THIS LATER
-//     float3 weightedResult = (0.1 * resultNow) + (0.90 * _IntegrandPast[id.x]);
-
-//     if (weightedResult.x < 0.1 && weightedResult.y < 0.1 && weightedResult.z < 0.1){
-//         weightedResult = float3(0.0, 0.0, 0.0);
-//     }
-//     _IntegrandPast[id.x] = weightedResult;
-//     _Vectors[id.x] = weightedResult;
-//     }
-// }
 
 KERNEL_NAME(Outwards)
 KERNEL_NAME(Swirl)

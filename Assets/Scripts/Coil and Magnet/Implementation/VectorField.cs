@@ -29,6 +29,7 @@ public class VectorField : MonoBehaviour
     /// Same indexing scheme as <cref>positionsBuffer</cref>.
     /// </summary>
     public ComputeBuffer vectorsBuffer { get; protected set; }
+    public ComputeBuffer dbArrayBuffer { get; protected set; }
     public ComputeBuffer magneticFieldPastBuffer { get; protected set; }
 
     public ComputeBuffer integrandPastBuffer { get; protected set; }
@@ -63,6 +64,7 @@ public class VectorField : MonoBehaviour
         centerID = Shader.PropertyToID("_CenterPosition"),
         positionsBufferID = Shader.PropertyToID("_Positions"),
         vectorBufferID = Shader.PropertyToID("_Vectors"),
+        dbArrayBufferID = Shader.PropertyToID("_DbArray"),
         magneticFieldPastBufferID = Shader.PropertyToID("_MagneticFieldPast"),
         integrandPastBufferID = Shader.PropertyToID("_IntegrandPast"),
         floatArgsID = Shader.PropertyToID("_FloatArgs"),
@@ -149,6 +151,7 @@ public class VectorField : MonoBehaviour
         {
             vectorsBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3)); // last arg: size of single object
             magneticFieldPastBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
+            dbArrayBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
             integrandPastBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
             integrandBuffer = new ComputeBuffer(numOfPoints, sizeof(Vector3));
         }
@@ -163,6 +166,9 @@ public class VectorField : MonoBehaviour
 
         magneticFieldPastBuffer.Release();
         magneticFieldPastBuffer = null;
+
+        dbArrayBuffer.Release();
+        dbArrayBuffer = null;
 
         integrandPastBuffer.Release();
         integrandPastBuffer = null;
@@ -247,6 +253,10 @@ public class VectorField : MonoBehaviour
         
         if (magneticFieldPastBuffer != null){
             computeShader.SetBuffer(kernelID, magneticFieldPastBufferID, magneticFieldPastBuffer);
+        }
+
+        if (dbArrayBuffer != null){
+            computeShader.SetBuffer(kernelID, dbArrayBufferID, dbArrayBuffer);
         }
 
         if (integrandPastBuffer != null){

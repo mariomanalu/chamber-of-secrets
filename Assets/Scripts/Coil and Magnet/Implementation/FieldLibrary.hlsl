@@ -65,8 +65,12 @@ float3 Db(float3 position, int index){
     float3 vect =  displacement / (_TimeInterval);
 
     // Store the new field at index of _MagneticFieldPast
-    _MagneticFieldPast[index] = field;
-    
+    if (vect.x != 0.0 && vect.y != 0.0 && vect.z != 0.0){
+        _DbArray[index] = vect;
+    }
+    else{
+        _MagneticFieldPast[index] = field;
+    }
     return vect;
 };
 
