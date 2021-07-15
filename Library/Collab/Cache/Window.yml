@@ -14,35 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/QuickOutline.meta
-    - Assets/QuickOutline/Readme.txt
-    - Assets/QuickOutline/Readme.txt.meta
-    - Assets/QuickOutline/Resources.meta
-    - Assets/QuickOutline/Resources/Materials.meta
-    - Assets/QuickOutline/Resources/Materials/OutlineFill.mat
-    - Assets/QuickOutline/Resources/Materials/OutlineFill.mat.meta
-    - Assets/QuickOutline/Resources/Materials/OutlineMask.mat
-    - Assets/QuickOutline/Resources/Materials/OutlineMask.mat.meta
-    - Assets/QuickOutline/Resources/Shaders.meta
-    - Assets/QuickOutline/Resources/Shaders/OutlineFill.shader
-    - Assets/QuickOutline/Resources/Shaders/OutlineFill.shader.meta
-    - Assets/QuickOutline/Resources/Shaders/OutlineMask.shader
-    - Assets/QuickOutline/Resources/Shaders/OutlineMask.shader.meta
-    - Assets/QuickOutline/Samples.meta
-    - Assets/QuickOutline/Samples/Materials.meta
-    - Assets/QuickOutline/Samples/Materials/Plane.mat
-    - Assets/QuickOutline/Samples/Materials/Plane.mat.meta
-    - Assets/QuickOutline/Samples/Scenes.meta
-    - Assets/QuickOutline/Samples/Scenes/QuickOutline.unity
-    - Assets/QuickOutline/Samples/Scenes/QuickOutline.unity.meta
-    - Assets/QuickOutline/Scripts.meta
-    - Assets/QuickOutline/Scripts/Outline.cs
-    - Assets/QuickOutline/Scripts/Outline.cs.meta
     - Assets/Scenes/Coil and Magnet.unity
     - Assets/Scripts/Coil and Magnet/UI Scripts/GUIPanel.cs
-    - Assets/Scripts/Coil and Magnet/UI Scripts/SideButton.cs
+    - ProjectSettings/TagManager.asset
     - 
-    m_Values: 00000000000000000000000000000000000000000000000000000000
+    m_Values: 00000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
