@@ -39,6 +39,10 @@ public class GUIPanel : MonoBehaviour
     }
 
     void Update(){
+        // Max of magnet.transform.position.x = 2 * max(Mathf.Cos(Mathf.PI * slider.value * .1f) - .138f) = 1.862
+        // Min of magnet.transform.position.x = 2 * min(Mathf.Cos(Mathf.PI * slider.value * .1f) - .138f) = -2.138
+        // Refactor magnet.transform.position.x later such that we don't need any offset
+        slider.value = magnet.transform.position.x;
         int identifier = (int)(field.fieldType);
 
         switch(identifier)
@@ -62,7 +66,6 @@ public class GUIPanel : MonoBehaviour
                 display.SetText($"This is the Electric field. It is computed using the Faraday-Maxwell formula for Electric field.");
                 break;   
         }
-        
         
     }
 }
