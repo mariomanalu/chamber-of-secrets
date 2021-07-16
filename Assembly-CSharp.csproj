@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\Display.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\MoveMagnet.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\SouthPole.cs" />
@@ -53,7 +54,7 @@
      <Compile Include="Assets\Scripts\Coil and Magnet\VRRig.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\UI Scripts\GUIPanel.cs" />
      <Compile Include="Assets\_Barking_Dog\Common Scripts\MouseLook.cs" />
-     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
+     <Compile Include="Assets\Wristwatch\Scripts\RealClock.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\computeShader.compute" />
@@ -80,6 +81,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Scripts\Coil and Magnet\Implementation\PointsPlot.hlsl" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Wristwatch\Shaders\AO.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\Implementation\RectPoints.compute" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
