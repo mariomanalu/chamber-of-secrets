@@ -8,6 +8,7 @@ public class MoveMagnet : MonoBehaviour
     public float sliderValue;
     
     public bool isPaused;
+    
     void Start(){
         sliderValue = 1.862f;
         isPaused = true;

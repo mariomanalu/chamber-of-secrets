@@ -15,10 +15,8 @@ MonoBehaviour:
   SimpleSelectedItems:
     m_Keys:
     - Assets/Scenes/Coil and Magnet.unity
-    - Assets/Scripts/Coil and Magnet/UI Scripts/GUIPanel.cs
-    - ProjectSettings/TagManager.asset
     - 
-    m_Values: 00000000
+    m_Values: 0000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

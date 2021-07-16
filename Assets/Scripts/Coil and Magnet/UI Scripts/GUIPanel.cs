@@ -32,6 +32,7 @@ public class GUIPanel : MonoBehaviour
     {
         if(magnet.GetComponent<MoveMagnet>().isPaused){ 
             magnet.transform.position = new Vector3(slider.value, 1.467f, 0.345f);
+            magnet.GetComponent<MoveMagnet>().sliderValue = 10 * (Mathf.Acos((slider.value + 0.138f)/2)) / Mathf.PI;
         }   
     }
 
