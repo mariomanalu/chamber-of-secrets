@@ -14,13 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scenes/Coil and Magnet.unity
-    - Assets/Scripts/Coil and Magnet/UI Scripts/Warning.cs
-    - Assets/Scripts/Coil and Magnet/UI Scripts/Warning.cs.meta
-    - Assets/Wristwatch/Models/Materials/WatchStrap.mat
+    - Assets/Objects/iPed.mat
+    - Assets/Objects/iPed.mat.meta
     - 
-    m_Values: 0000000000
-  RevisionSummary: 
+    m_Values: 010101
+  RevisionSummary: Added a warning message after 15 mins of playing
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0
