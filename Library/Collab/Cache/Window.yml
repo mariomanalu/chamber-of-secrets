@@ -15,8 +15,11 @@ MonoBehaviour:
   SimpleSelectedItems:
     m_Keys:
     - Assets/Scenes/Coil and Magnet.unity
+    - Assets/Scripts/Coil and Magnet/UI Scripts/Warning.cs
+    - Assets/Scripts/Coil and Magnet/UI Scripts/Warning.cs.meta
+    - Assets/Wristwatch/Models/Materials/WatchStrap.mat
     - 
-    m_Values: 0000
+    m_Values: 0000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

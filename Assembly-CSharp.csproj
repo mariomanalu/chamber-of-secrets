@@ -40,6 +40,7 @@
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\Display.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\MoveMagnet.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\SouthPole.cs" />
+     <Compile Include="Assets\Wristwatch\Scripts\RealClock.cs" />
      <Compile Include="Assets\Scripts\Hands\HandPresence.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\FieldZone.cs" />
      <Compile Include="Assets\Hands\HandMotion.cs" />
@@ -54,7 +55,7 @@
      <Compile Include="Assets\Scripts\Coil and Magnet\VRRig.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\UI Scripts\GUIPanel.cs" />
      <Compile Include="Assets\_Barking_Dog\Common Scripts\MouseLook.cs" />
-     <Compile Include="Assets\Wristwatch\Scripts\RealClock.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\UI Scripts\Warning.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\computeShader.compute" />
