@@ -13,12 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
-    m_Keys:
-    - Assets/Objects/iPed.mat
-    - Assets/Objects/iPed.mat.meta
-    - 
-    m_Values: 010101
-  RevisionSummary: Added a warning message after 15 mins of playing
+    m_Keys: []
+    m_Values: 
+  RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0
