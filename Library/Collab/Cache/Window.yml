@@ -14,12 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Objects/NPC/Newton Material.mat
-    - Assets/Objects/Pictures/Faraday's Lecture.jpg
-    - Assets/Objects/Pictures/Faraday's Lecture.jpg.meta
-    - Assets/Scenes/Coil and Magnet.unity
+    - Assets/Sci-fi.meta
+    - Assets/Sci-fi/Consoles.meta
+    - Assets/Sci-fi/Consoles/Free.meta
+    - Assets/Sci-fi/Consoles/Free/Console_1.meta
+    - Assets/Sci-fi/Consoles/Free/Console_1/Models.meta
+    - Assets/Sci-fi/Consoles/Free/Console_1/Models/Console_1.fbx
+    - Assets/Sci-fi/Consoles/Free/Console_1/Models/Console_1.fbx.meta
+    - Assets/Sci-fi/Consoles/Free/Console_1/Prefabs.meta
+    - Assets/Sci-fi/Consoles/Free/Console_1/Prefabs/Console_1_Set_2.prefab
+    - Assets/Sci-fi/Consoles/Free/Console_1/Prefabs/Console_1_Set_2.prefab.meta
     - 
-    m_Values: 0000000000
+    m_Values: 0101010101010101010101
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
