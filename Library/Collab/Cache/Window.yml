@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Sci-fi/Consoles/Free/Console_1/Prefabs/Console_1_Set_2.prefab
     - 
-    m_Values: 0101
-  RevisionSummary: 
+    m_Values: 01
+  RevisionSummary: Added an interactable magnet in the second big room
   ChangesSearchValue: 
-  SelectedHistoryRevision: 037c4478d43a47708e9735c9e75ac4d1b202c7bd
+  SelectedHistoryRevision: 
   HistoryPageNumber: 0
-  TabIndex: 1
+  TabIndex: 0

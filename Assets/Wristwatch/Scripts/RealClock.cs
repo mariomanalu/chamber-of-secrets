@@ -39,7 +39,13 @@ public class RealClock : MonoBehaviour {
 
 		if(Seconds)
 			Seconds.localRotation = Quaternion.Euler (0, 0, second / 60 * 360);
+	}
 
+	public void Show(){
+		GetComponent<Renderer>().enabled = true;
+	}
 
+	public void Hide(){
+		GetComponent<Renderer>().enabled = false;
 	}
 }

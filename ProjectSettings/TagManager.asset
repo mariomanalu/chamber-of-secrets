@@ -13,13 +13,13 @@ TagManager:
   - Water
   - UI
   - Player
-  - Grab Interactables
+  - 
   - Hands
   - Mask Objects
   - Table
-  - 
-  - 
-  - 
+  - Right Hand Interactables
+  - Left Hand Interactables
+  - Both Hand Interactables
   - 
   - 
   - 

@@ -52,10 +52,10 @@
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorDisplay.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\NorthPole.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\RectZone.cs" />
-     <Compile Include="Assets\_Barking_Dog\Common Scripts\Turn_Move.cs" />
+     <Compile Include="Assets\Futuristic Environment\Common Scripts\Turn_Move.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\VRRig.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\UI Scripts\GUIPanel.cs" />
-     <Compile Include="Assets\_Barking_Dog\Common Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Futuristic Environment\Common Scripts\MouseLook.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\computeShader.compute" />
@@ -65,15 +65,12 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\Implementation\VectorDisplay.compute" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-     <None Include="Assets\Interior Asset\README.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\Implementation\FieldLibrary.hlsl" />
-     <None Include="Assets\Interior Asset\Source\InteriorPlant\Cactus\Flower\Materials\Double Sided Transparent Diffuse Bump Cutout.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\Implementation\VectorShader.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\Implementation\VectorCompute.compute" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\Interior Asset\Source\InteriorPlant\Grass\Materials\Double Sided Transparent Diffuse Bump Cutout.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -94,7 +91,7 @@
      <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\_Barking_Dog\Readme_Please.txt" />
+     <None Include="Assets\Futuristic Environment\Readme_Please.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
