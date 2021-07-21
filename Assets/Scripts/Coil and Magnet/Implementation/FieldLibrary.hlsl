@@ -11,26 +11,13 @@
 //      in VectorFields.cs. MAKE SURE that the order of this list is the same as the
 //      order of the lines at the top of VectorCompute.compute. 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-#define PI 3.14159265358979323846
 float3 Outwards(float3 position, int index)
 {
     return position;
 };
 
 
-
-float3 Swirl(float3 position, int index)
-{
-    float3 val;
-    val.x = -position.z;
-    val.y = 0;
-    val.z = position.x;
-    return val;
-};
-
-
-
-float3 Coulomb(float3 position, int index)
+float3 Magnetic(float3 position, int index)
 {
     float3 vect = float3(0.0, 0.0, 0.0);
     // The first argument in _FloatArgs is the number of charges in the system
@@ -56,7 +43,7 @@ float3 Db(float3 position, int index){
     float3 fieldPast = _MagneticFieldPast[index];
     
     // Calculate the position of the magnetic field now
-    float3 field = Coulomb(position, index);
+    float3 field = Magnetic(position, index);
     
     // Compute the displacement
     float3 displacement = field - fieldPast;

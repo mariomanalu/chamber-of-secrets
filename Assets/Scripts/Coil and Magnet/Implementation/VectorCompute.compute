@@ -1,10 +1,6 @@
 #pragma kernel OutwardsField
-#pragma kernel SwirlField
-#pragma kernel CoulombField
-#pragma kernel DbField
-#pragma kernel IntegrandField
-//#pragma kernel ElectricField
-#pragma kernel CalculateElectricField
+#pragma kernel MagneticField
+#pragma kernel Electric
 // The buffer storing the positions
 RWStructuredBuffer<float3> _Positions;
 
@@ -66,7 +62,7 @@ void DbField(uint3 id : SV_DispatchThreadID) {
 #define PI 3.14159265358979323846
 
 [numthreads(64, 1, 1)] 
-void CalculateElectricField(uint3 id : SV_DispatchThreadID) {
+void Electric(uint3 id : SV_DispatchThreadID) {
     uint bufferSize; 
     uint stride;
     
@@ -95,6 +91,4 @@ void CalculateElectricField(uint3 id : SV_DispatchThreadID) {
 }
 
 KERNEL_NAME(Outwards)
-KERNEL_NAME(Swirl)
-KERNEL_NAME(Coulomb)
-KERNEL_NAME(Integrand)
+KERNEL_NAME(Magnetic)
