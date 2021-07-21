@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Sci-fi/Consoles/Free/Console_1/Prefabs/Picture Console.prefab
+    - Assets/Scripts/Picture Tet Script.meta
+    - Assets/Scripts/Picture Tet Script/NewtonText.cs
+    - Assets/Scripts/Picture Tet Script/NewtonText.cs.meta
     - 
-    m_Values: 0101
-  RevisionSummary: 
+    m_Values: 01010101
+  RevisionSummary: Modularized museum
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0
