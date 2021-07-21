@@ -1,6 +1,6 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/manaluma/Chamber Of Secret - Friday/Packages/manifest.json
+    m_FilePath: C:/Users/manaluma/Chamber Of Secret - Original/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -8,7 +8,7 @@ m_ProjectFiles:
       ticks: 637605020115858994
     m_Hash: 1732280981
   m_LockFileStatus:
-    m_FilePath: C:/Users/manaluma/Chamber Of Secret - Friday/Packages/packages-lock.json
+    m_FilePath: C:/Users/manaluma/Chamber Of Secret - Original/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -126,7 +126,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.3
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.animation.rigging@1.0.3
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.animation.rigging@1.0.3
       assetPath: Packages/com.unity.animation.rigging
       name: com.unity.animation.rigging
       displayName: Animation Rigging
@@ -218,7 +218,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.5.7
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.collab-proxy@1.5.7
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.collab-proxy@1.5.7
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Version Control
@@ -323,7 +323,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.ide.rider@2.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -430,7 +430,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.8
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.ide.visualstudio@2.0.8
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.ide.visualstudio@2.0.8
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -517,7 +517,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -586,7 +586,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.learn.iet-framework@1.2.3
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.learn.iet-framework@1.2.3
       assetPath: Packages/com.unity.learn.iet-framework
       name: com.unity.learn.iet-framework
       displayName: Tutorial Framework
@@ -720,7 +720,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.1.1
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.postprocessing@3.1.1
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.postprocessing@3.1.1
       assetPath: Packages/com.unity.postprocessing
       name: com.unity.postprocessing
       displayName: Post Processing
@@ -809,7 +809,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 4.5.0
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.probuilder@4.5.0
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.probuilder@4.5.0
       assetPath: Packages/com.unity.probuilder
       name: com.unity.probuilder
       displayName: ProBuilder
@@ -949,7 +949,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.24
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.test-framework@1.1.24
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.test-framework@1.1.24
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -1041,7 +1041,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.6
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.textmeshpro@3.0.6
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.textmeshpro@3.0.6
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -1196,7 +1196,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.4.8
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.timeline@1.4.8
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.timeline@1.4.8
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -1409,7 +1409,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0-pre.4
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.xr.interaction.toolkit@1.0.0-pre.4
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.xr.interaction.toolkit@1.0.0-pre.4
       assetPath: Packages/com.unity.xr.interaction.toolkit
       name: com.unity.xr.interaction.toolkit
       displayName: XR Interaction Toolkit
@@ -1512,7 +1512,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 4.0.5
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.xr.management@4.0.5
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.xr.management@4.0.5
       assetPath: Packages/com.unity.xr.management
       name: com.unity.xr.management
       displayName: XR Plugin Management
@@ -1573,12 +1573,14 @@ m_PackageAssets:
         - 4.0.5
         - 4.0.6
         - 4.0.7
+        - 4.1.0-pre.1
         compatible:
         - 4.0.1
         - 4.0.3
         - 4.0.5
         - 4.0.6
         - 4.0.7
+        - 4.1.0-pre.1
         verified: 4.0.7
       dependencies:
       - name: com.unity.modules.subsystems
@@ -1639,7 +1641,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.9.1
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.xr.oculus@1.9.1
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.xr.oculus@1.9.1
       assetPath: Packages/com.unity.xr.oculus
       name: com.unity.xr.oculus
       displayName: Oculus XR Plugin
@@ -1695,9 +1697,11 @@ m_PackageAssets:
         - 1.9.0
         - 1.9.1
         - 1.10.0-preview.1
+        - 1.10.0-preview.2
         compatible:
         - 1.9.1
         - 1.10.0-preview.1
+        - 1.10.0-preview.2
         verified: 1.9.1
       dependencies:
       - name: com.unity.xr.management
@@ -1760,7 +1764,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.1
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.xr.openxr@1.1.1
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.xr.openxr@1.1.1
       assetPath: Packages/com.unity.xr.openxr
       name: com.unity.xr.openxr
       displayName: OpenXR Plugin
@@ -1853,7 +1857,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 4.5.0
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.xr.windowsmr@4.5.0
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.xr.windowsmr@4.5.0
       assetPath: Packages/com.unity.xr.windowsmr
       name: com.unity.xr.windowsmr
       displayName: Windows XR Plugin
@@ -3730,7 +3734,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.1
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.xr.interactionsubsystems@1.0.1
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.xr.interactionsubsystems@1.0.1
       assetPath: Packages/com.unity.xr.interactionsubsystems
       name: com.unity.xr.interactionsubsystems
       displayName: XR Interaction Subsystems
@@ -3793,7 +3797,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 4.1.7
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.xr.arsubsystems@4.1.7
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.xr.arsubsystems@4.1.7
       assetPath: Packages/com.unity.xr.arsubsystems
       name: com.unity.xr.arsubsystems
       displayName: AR Subsystems
@@ -3918,7 +3922,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 2.1.7
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.7
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.7
       assetPath: Packages/com.unity.xr.legacyinputhelpers
       name: com.unity.xr.legacyinputhelpers
       displayName: XR Legacy Input Helpers
@@ -3960,9 +3964,11 @@ m_PackageAssets:
         - 2.1.4
         - 2.1.6
         - 2.1.7
+        - 2.1.8
         compatible:
         - 2.1.7
-        verified: 2.1.7
+        - 2.1.8
+        verified: 2.1.8
       dependencies:
       - name: com.unity.modules.vr
         version: 1.0.0
@@ -4010,7 +4016,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.2
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.inputsystem@1.0.2
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.inputsystem@1.0.2
       assetPath: Packages/com.unity.inputsystem
       name: com.unity.inputsystem
       displayName: Input System
@@ -4120,7 +4126,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.ext.nunit@1.0.6
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.ext.nunit@1.0.6
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -4181,7 +4187,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.3
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.settings-manager@1.0.3
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.settings-manager@1.0.3
       assetPath: Packages/com.unity.settings-manager
       name: com.unity.settings-manager
       displayName: Settings Manager
@@ -4239,7 +4245,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.editorcoroutines@1.0.0
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.editorcoroutines@1.0.0
       assetPath: Packages/com.unity.editorcoroutines
       name: com.unity.editorcoroutines
       displayName: Editor Coroutines
@@ -4303,7 +4309,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 2.0.0
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
       assetPath: Packages/com.unity.nuget.newtonsoft-json
       name: com.unity.nuget.newtonsoft-json
       displayName: Newtonsoft Json
@@ -4377,7 +4383,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.3.4
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.burst@1.3.4
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.burst@1.3.4
       assetPath: Packages/com.unity.burst
       name: com.unity.burst
       displayName: Burst
@@ -4586,7 +4592,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.1.0
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.subsystemregistration@1.1.0
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.subsystemregistration@1.1.0
       assetPath: Packages/com.unity.subsystemregistration
       name: com.unity.subsystemregistration
       displayName: Subsystem Registration
@@ -4648,7 +4654,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.2.1
       source: 1
-      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Friday\Library\PackageCache\com.unity.mathematics@1.2.1
+      resolvedPath: C:\Users\manaluma\Chamber Of Secret - Original\Library\PackageCache\com.unity.mathematics@1.2.1
       assetPath: Packages/com.unity.mathematics
       name: com.unity.mathematics
       displayName: Mathematics
@@ -4720,5 +4726,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Users/manaluma/Chamber Of Secret - Friday/Packages
+m_ProjectPath: C:/Users/manaluma/Chamber Of Secret - Original/Packages
 m_EditorVersion: 2020.3.10f1 (297d780c91bc)
