@@ -14,13 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Objects/Magnet/Another Field Material.mat
-    - Assets/Objects/Magnet/Another Field Material.mat.meta
-    - Assets/Objects/Magnet/Field Material.mat
-    - Assets/Objects/Magnet/Field Material.mat.meta
-    - Assets/Scenes/Coil and Magnet.unity
+    - Assets/Sci-fi/Consoles/Free/Console_1/Prefabs/Picture Console.prefab
     - 
-    m_Values: 010101010101
+    m_Values: 0101
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
