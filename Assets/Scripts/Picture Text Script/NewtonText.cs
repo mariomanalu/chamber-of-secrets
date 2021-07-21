@@ -12,7 +12,7 @@ public class NewtonText : MonoBehaviour
     ControllerButton controller;
     
     void Update(){
-        int pageNumber = controller.pageNumber % 9;
+        int pageNumber = controller.pageNumber % 5;
         switch(pageNumber)
         {
             case 0:
@@ -28,18 +28,6 @@ public class NewtonText : MonoBehaviour
                 display.SetText($"He also believed that force always acted in straight lines.");
                 break;
             case 4:
-                display.SetText($"This Newtonian conceptualization of force is often referred to as action at a distance.");
-                break;
-            case 5:
-                display.SetText($"Isaac Newton (1642-1727) is regarded as one of the most influential scientists of all time.");
-                break;
-            case 6:
-                display.SetText($"Newton imagined that force always acted between two or more objects.");
-                break;
-            case 7:
-                display.SetText($"He also believed that force always acted in straight lines.");
-                break;
-            case 8:
                 display.SetText($"This Newtonian conceptualization of force is often referred to as action at a distance.");
                 break;
         }
