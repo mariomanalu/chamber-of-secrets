@@ -17,7 +17,7 @@ public class HeavisideText : MonoBehaviour
         switch(pageNumber)
         {
             case 0:
-                display.SetText($"Oliver Heaviside (1950-1925).");
+                display.SetText($"Oliver Heaviside (1850-1925).");
                 break;
             case 1:
                 display.SetText($"He simplified Maxwell’s original equations and shaped the way that they are applied.");
