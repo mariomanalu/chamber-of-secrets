@@ -20,8 +20,8 @@ public class MoveMagnet : MonoBehaviour
         if (!isPaused)
         {
             transform.position = new Vector3(2 * Mathf.Cos(Mathf.PI  * sliderValue * .1f) - .138f, 1.467f, 0.345f);
-            Debug.Log("SliderValue " + sliderValue);
-            Debug.Log("Position x " + transform.position.x);
+            //Debug.Log("SliderValue " + sliderValue);
+            //Debug.Log("Position x " + transform.position.x);
         }
     }
 }

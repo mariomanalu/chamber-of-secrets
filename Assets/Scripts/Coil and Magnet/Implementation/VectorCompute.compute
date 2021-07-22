@@ -24,6 +24,8 @@ float _Distance;
 // These buffers allow you to send additional arguments to whatever your field function is. 
 StructuredBuffer<float> _FloatArgs;
 StructuredBuffer<float3> _VectorArgs;
+StructuredBuffer<float3> _VelocityArgs;
+
 // It's up to you to parse these inside the function, so you can split them into two separate arrays
 // if you choose. Just remember that not every model supports GetDimensions, so you need to figure
 // out for yourself how to stop from going out of bounds. 
@@ -68,27 +70,19 @@ void Electric(uint3 id : SV_DispatchThreadID) {
     
     _Positions.GetDimensions(bufferSize, stride); 
     if (id.x < bufferSize){
-        Db(_Positions[id.x] - _CenterPosition, id.x);
-        // The Riemann sum
-        int j;
-        float3 resultNow = float3(0.0, 0.0, 0.0);
-        for (j = 0; j < _NumberOfPoints; j++){
-            float3 displacement = _Positions[id.x] - _Positions[j];
-            if (length(displacement) >.0000001){
-                resultNow += (cross(_DbArray[j], displacement)) / pow(length(displacement),3);
-            }
+        float3 result = float3(0.0, 0.0, 0.0);
+        float i;
+        for (i = 1.0; i < 3.0; i++) // numCharges + 0.0; i++)
+        {
+            // The zeroth index of _VectorArgs is unused so that the two buffers align.
+            float3 displacement = _Positions[id.x] - _VectorArgs[i];
+            float distanceSquared = pow(length(displacement),2);   
+            result += cross(_VelocityArgs[i], displacement)/distanceSquared;
         }
-        
-        resultNow = resultNow * (-1 / (4 * PI)) * 0.01; // 0.01 is to scale down the vectors
-        //_Vectors[id.x] = resultNow;
-        
-        //WORRY ABOUT THIS LATER
-        float3 weightedResult = (0.9 * resultNow) + (0.1 * _IntegrandPast[id.x]);
-
-        _IntegrandPast[id.x] = weightedResult;
-        _Vectors[id.x] = weightedResult;
-        }
+        _Vectors[id.x] = result;
+    }
 }
+
 
 KERNEL_NAME(Outwards)
 KERNEL_NAME(Magnetic)

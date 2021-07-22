@@ -14,13 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Objects/Pictures/Head Stand.mat
-    - Assets/Objects/Pictures/Head Stand.mat.meta
-    - Assets/Scripts/Picture Text Script/FaradayText.cs
-    - Assets/Scripts/Picture Text Script/MaxwellText.cs
-    - Assets/Scripts/Picture Text Script/MaxwellText.cs.meta
+    - Assets/Scripts/Coil and Magnet/Implementation/Magnetic.cs
+    - Assets/Scripts/Coil and Magnet/Implementation/VectorCompute.compute
+    - Assets/Scripts/Coil and Magnet/Implementation/VectorField.cs
     - 
-    m_Values: 000000000000
+    m_Values: 00000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

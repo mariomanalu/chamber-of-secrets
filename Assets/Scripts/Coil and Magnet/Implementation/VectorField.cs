@@ -47,7 +47,7 @@ public class VectorField : MonoBehaviour
     /// </summary>
     public ComputeBuffer vectorArgsBuffer { get; set; }
     
-
+    public ComputeBuffer velocityArgsBuffer { get; set; }
     /// <summary>
     /// The number of points at which vectors will be plotted and the number of values in each buffer.
     /// </summary>
@@ -74,7 +74,8 @@ public class VectorField : MonoBehaviour
         numberOfPointsID = Shader.PropertyToID("_NumberOfPoints"),
         integrandBufferID = Shader.PropertyToID("_Integrand"),
         distanceID = Shader.PropertyToID("_Distance"),
-        vectorArgsID = Shader.PropertyToID("_VectorArgs");
+        vectorArgsID = Shader.PropertyToID("_VectorArgs"),
+        velocityArgsID = Shader.PropertyToID("_VelocityArgs");
 
 
     /// <summary>
@@ -238,6 +239,11 @@ public class VectorField : MonoBehaviour
         if(vectorArgsBuffer != null) {
             computeShader.SetBuffer(kernelID, vectorArgsID, vectorArgsBuffer);
         }
+
+        if(velocityArgsBuffer != null) {
+            computeShader.SetBuffer(kernelID, velocityArgsID, velocityArgsBuffer);
+        }
+
         
         if (magneticFieldPastBuffer != null){
             computeShader.SetBuffer(kernelID, magneticFieldPastBufferID, magneticFieldPastBuffer);
