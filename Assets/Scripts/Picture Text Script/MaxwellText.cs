@@ -19,13 +19,13 @@ public class MaxwellText : MonoBehaviour
                 display.SetText($"James Clerk Maxwell (1831-1879).");
                 break;
             case 1:
-                display.SetText($"He was a highly educated mathematician/ physicist..");
+                display.SetText($"He was an educated mathematician and physicist.");
                 break;
             case 2:
-                display.SetText($"He was persuaded by Faraday’s ideas and careful experimentation and sought to derive equations which would describe Faraday’s lines of force.");
+                display.SetText($"He was persuaded by Faraday’s ideas and careful experimentation.");
                 break;
             case 3:
-                display.SetText($"Without a formal education, Faraday was able to conceptualize force in a way that rejected the scientific dogma of the time.");
+                display.SetText($"He sought to derive equations which would describe Faraday’s lines of force.");
                 break;
             case 4:
                 display.SetText($"MORE TEXT TO COME");

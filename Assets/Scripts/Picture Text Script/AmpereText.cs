@@ -23,13 +23,13 @@ public class AmpereText : MonoBehaviour
                 display.SetText($"He quickly reacted to Hans Christian Oersted’s discovery of the connection between electricity and magnetism.");
                 break;
             case 2:
-                display.SetText($"He made some essential discoveries and derived many useful equations.");
+                display.SetText($"As a result, he made some essential discoveries and derived many useful equations.");
                 break;
             case 3:
                 display.SetText($"He discovered that a hollow coil of current-carrying wire behaves like a cylindrical bar magnet with the same surface area.");
                 break;
             case 5:
-                display.SetText($"Additionally, he derived the first equations used to describe the repulsion and attraction that occurs between two current carrying wires. ");
+                display.SetText($"He also derived the first equations that describe the repulsion and attraction between two current carrying wires.");
                 break;
         }
     }

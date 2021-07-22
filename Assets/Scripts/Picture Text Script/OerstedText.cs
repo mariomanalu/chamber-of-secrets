@@ -13,7 +13,7 @@ public class OerstedText : MonoBehaviour
     ControllerButton controller;
     
     void Update(){
-        int pageNumber = controller.pageNumber % 5;
+        int pageNumber = controller.pageNumber % 6;
         switch(pageNumber)
         {
             case 0:
@@ -29,7 +29,10 @@ public class OerstedText : MonoBehaviour
                 display.SetText($"Oersted discovered that current carrying wires, bar magnets, and compasses all exert force on each other.");
                 break;
             case 4:
-                display.SetText($"His discoveries generated a frenzy of research in the following years, resulting in a massive number of publications on the subject - most notably those of Faraday and Ampère.");
+                display.SetText($"His discoveries generated a frenzy of research in the following years.");
+                break;
+            case 5:
+                display.SetText($"As a result, there is a massive increase in the number of publications on the subject - most notably those of Faraday and Ampère.");
                 break;
         }
     }

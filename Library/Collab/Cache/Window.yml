@@ -14,15 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Objects/Pictures/Faraday.jpeg
-    - Assets/Objects/Pictures/Faraday.jpeg.meta
-    - Assets/Objects/Pictures/Faraday.jpg
-    - Assets/Objects/Pictures/Faraday.jpg.meta
-    - Assets/Scripts/Citation.cs
-    - Assets/Scripts/Citation.cs.meta
     - 
-    m_Values: 01010101010101
-  RevisionSummary: 
+    m_Values: 01
+  RevisionSummary: Prettified museum
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0

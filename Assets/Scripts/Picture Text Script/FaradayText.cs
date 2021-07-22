@@ -13,32 +13,29 @@ public class FaradayText : MonoBehaviour
     ControllerButton controller;
     
     void Update(){
-        int pageNumber = controller.pageNumber % 8;
+        int pageNumber = controller.pageNumber % 7;
         switch(pageNumber)
         {
             case 0:
                 display.SetText($"Michael Faraday (1791-1867).");
                 break;
             case 1:
-                display.SetText($"He is often described as the world’s most brilliant experimentalist.");
+                display.SetText($"He is described as the world’s most brilliant experimentalist.");
                 break;
             case 2:
-                display.SetText($"Our current conceptions of electricity, magnetism, and force fields are all built off of Faraday’s research and ideas.");
+                display.SetText($"The concepts of electricity, magnetism, and force fields are built off of his research and ideas.");
                 break;
             case 3:
-                display.SetText($"Without a formal education, Faraday conceptualized force in a way that rejected the scientific dogma of the time.");
+                display.SetText($"Without a formal education, he conceptualized force in a way that rejected the scientific dogma of the time.");
                 break;
             case 4:
-                display.SetText($"Many of Michel Faraday’s ideas about force and force fields appear contradictory to Newton's.");
+                display.SetText($"Many of his ideas about force and force fields appear contradictory to Newton's.");
                 break;
             case 5:
-                display.SetText($"For this reason, many of Faraday’s theories were initially received with immense skepticism.");
+                display.SetText($"He imagined electric and magnetic force completely filling space, and not acting in straight lines.");
                 break;
             case 6:
-                display.SetText($"Faraday envisioned force fields with circular forces.");
-                break;
-            case 7:
-                display.SetText($"Additionally, he imagined electric and magnetic force completely filling space, and not acting in straight lines.");
+                display.SetText($"For this reason, many of his theories were initially received with immense skepticism.");
                 break;
         }
     }
