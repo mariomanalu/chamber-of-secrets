@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scenes/Coil and Magnet.unity
+    - Assets/Objects/Pictures/Faraday.jpeg
+    - Assets/Objects/Pictures/Faraday.jpeg.meta
+    - Assets/Objects/Pictures/Faraday.jpg
+    - Assets/Objects/Pictures/Faraday.jpg.meta
+    - Assets/Scripts/Citation.cs
+    - Assets/Scripts/Citation.cs.meta
     - 
-    m_Values: 0101
-  RevisionSummary: Made working electric field, but it will need to be renormalized
-    later
+    m_Values: 01010101010101
+  RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0

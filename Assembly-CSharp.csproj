@@ -48,21 +48,22 @@
      <Compile Include="Assets\Hands\HandMotion.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorField.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\NewtonText.cs" />
+     <Compile Include="Assets\Scripts\Picture Text Script\OerstedText.cs" />
+     <Compile Include="Assets\Scripts\Picture Text Script\MaxwellText.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\SideButton.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\FieldDetector.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\Magnetic.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorDisplay.cs" />
+     <Compile Include="Assets\Scripts\Picture Text Script\AmpereText.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\NorthPole.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\RectZone.cs" />
-     <Compile Include="Assets\Futuristic Environment\Common Scripts\Turn_Move.cs" />
+     <Compile Include="Assets\Objects\Futuristic Environment\Common Scripts\Turn_Move.cs" />
+     <Compile Include="Assets\Scripts\Picture Text Script\HeavisideText.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\VRRig.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\GUIPanel.cs" />
-     <Compile Include="Assets\Futuristic Environment\Common Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Objects\Futuristic Environment\Common Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\FaradayText.cs" />
-     <Compile Include="Assets\Scripts\Picture Text Script\MaxwellText.cs" />
-     <Compile Include="Assets\Scripts\Picture Text Script\AmpereText.cs" />
-     <Compile Include="Assets\Scripts\Picture Text Script\OerstedText.cs" />
-     <Compile Include="Assets\Scripts\Picture Text Script\HeavisideText.cs" />
+     <Compile Include="Assets\Scripts\Citation.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\computeShader.compute" />
@@ -98,7 +99,7 @@
      <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\Futuristic Environment\Readme_Please.txt" />
+     <None Include="Assets\Objects\Futuristic Environment\Readme_Please.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
