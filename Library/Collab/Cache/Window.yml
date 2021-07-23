@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scripts/Coil and Magnet/Shader.shader
     - 
-    m_Values: 0101
-  RevisionSummary: 
+    m_Values: 01
+  RevisionSummary: Implemented culling
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0
