@@ -46,8 +46,10 @@
      <Compile Include="Assets\Scripts\Hands\HandPresence.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\FieldZone.cs" />
      <Compile Include="Assets\Hands\HandMotion.cs" />
+     <Compile Include="Assets\Scripts\Picture Text Script\CoulombText.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorField.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\NewtonText.cs" />
+     <Compile Include="Assets\Scripts\Citation.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\OerstedText.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\MaxwellText.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\SideButton.cs" />
@@ -63,8 +65,7 @@
      <Compile Include="Assets\Scripts\UI Scripts\GUIPanel.cs" />
      <Compile Include="Assets\Objects\Futuristic Environment\Common Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\FaradayText.cs" />
-     <Compile Include="Assets\Scripts\Citation.cs" />
-     <Compile Include="Assets\Scripts\Picture Text Script\CoulombText.cs" />
+     <Compile Include="Assets\Scripts\Custom Locomotion System\TeleportManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\computeShader.compute" />
