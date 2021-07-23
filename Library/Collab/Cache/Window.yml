@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Keys:
     - 
     m_Values: 01
-  RevisionSummary: 
+  RevisionSummary: Implemented teleportation that cause problems with grabbing and
+    pressing button interactions.
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0
