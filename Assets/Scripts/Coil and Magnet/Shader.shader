@@ -28,6 +28,11 @@ Shader "Field/Shader"
 		void ConfigureSurface (Input input, inout SurfaceOutputStandard surface)
 		{
 			surface.Albedo = saturate(unity_ObjectToWorld._m02_m12_m22 * 0.5 + 0.5);
+			#if defined(UNITY_PROCEDURAL_INSTANCING_ENABLED)
+				float3 displacement = _Positions[unity_InstanceID] - _WorldSpaceCameraPos;
+				displacement.y = 0;
+				clip(length(displacement) - 0.5);
+			#endif
 		}
 
 
