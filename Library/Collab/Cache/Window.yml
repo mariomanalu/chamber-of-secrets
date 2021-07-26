@@ -14,10 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Scripts/Picture Text Script/LectureText.cs
+    - Assets/Scripts/Picture Text Script/LectureText.cs.meta
+    - Assets/Scripts/Picture Text Script/PresidencyText.cs
+    - Assets/Scripts/Picture Text Script/PresidencyText.cs.meta
+    - Assets/Scripts/Picture Text Script/VoltaText.cs
+    - Assets/Scripts/Picture Text Script/VoltaText.cs.meta
     - 
-    m_Values: 01
-  RevisionSummary: Implemented teleportation that cause problems with grabbing and
-    pressing button interactions.
+    m_Values: 01010101010101
+  RevisionSummary: Completed descriptions for the pictures
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0
