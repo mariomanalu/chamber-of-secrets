@@ -14,6 +14,10 @@ public class OerstedText : MonoBehaviour
     
     void Update(){
         int pageNumber = controller.pageNumber % 6;
+        if (pageNumber < 0)
+        {
+            pageNumber += 6;
+        }
         switch(pageNumber)
         {
             case 0:

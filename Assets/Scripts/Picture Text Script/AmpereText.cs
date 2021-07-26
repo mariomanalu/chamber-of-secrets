@@ -13,7 +13,11 @@ public class AmpereText : MonoBehaviour
     ControllerButton controller;
     
     void Update(){
-        int pageNumber = controller.pageNumber % 6;
+        int pageNumber = controller.pageNumber % 5;
+        if (pageNumber < 0)
+        {
+            pageNumber += 5;
+        }
         switch(pageNumber)
         {
             case 0:
@@ -28,7 +32,7 @@ public class AmpereText : MonoBehaviour
             case 3:
                 display.SetText($"He discovered that a hollow coil of current-carrying wire behaves like a cylindrical bar magnet with the same surface area.");
                 break;
-            case 5:
+            case 4:
                 display.SetText($"He also derived the first equations that describe the repulsion and attraction between two current carrying wires.");
                 break;
         }

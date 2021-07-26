@@ -13,6 +13,10 @@ public class CoulombText : MonoBehaviour
     
     void Update(){
         int pageNumber = controller.pageNumber % 7;
+        if (pageNumber < 0)
+        {
+            pageNumber += 7;
+        }
         switch(pageNumber)
         {
             case 0:

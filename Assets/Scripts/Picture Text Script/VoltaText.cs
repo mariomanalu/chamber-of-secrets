@@ -13,6 +13,10 @@ public class VoltaText : MonoBehaviour
     
     void Update(){
         int pageNumber = controller.pageNumber % 5;
+        if (pageNumber < 0)
+        {
+            pageNumber += 5;
+        }
         switch(pageNumber)
         {
             // Courtesy of wikipedia: https://en.wikipedia.org/wiki/Alessandro_Volta

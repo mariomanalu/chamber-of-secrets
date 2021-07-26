@@ -14,6 +14,10 @@ public class HeavisideText : MonoBehaviour
     
     void Update(){
         int pageNumber = controller.pageNumber % 9;
+        if (pageNumber < 0)
+        {
+            pageNumber += 9;
+        }
         switch(pageNumber)
         {
             case 0:

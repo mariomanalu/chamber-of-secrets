@@ -13,6 +13,10 @@ public class LectureText : MonoBehaviour
     
     void Update(){
         int pageNumber = controller.pageNumber % 4;
+        if (pageNumber < 0)
+        {
+            pageNumber += 4;
+        }
         switch(pageNumber)
         {
             case 0:
