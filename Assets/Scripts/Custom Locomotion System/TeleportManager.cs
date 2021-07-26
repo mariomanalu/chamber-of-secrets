@@ -1,37 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+
+
+/// <summary>
+/// This is an alternative to the default teleportation system. It initializes, enabling the ray interactor, 
+/// when the user triggers the "Teleport Start" action, and teleports the user (if the position is valid) when 
+/// the action is ended. 
+/// </summary>
 public class TeleportManager : MonoBehaviour
 {
+    /// <summary>
+    /// The input action asset storing the "Teleport Start" action.
+    /// </summary>
     [SerializeField]
-    XRRayInteractor leftRayInteractor;
+    InputActionAsset actionAsset;
 
-    [SerializeField]
-    XRRayInteractor leftTeleportInteractor;
-    public bool isInteractorActive = false;
+    /// <summary>
+    /// The "Teleport Start" action. 
+    /// </summary>
+    private InputAction teleportAction;
 
-    public void interactorSwitch()
+    /// <summary>
+    /// The <cref>XRRayInteractor</cref> with which the user selects a teleport location. 
+    /// </summary>
+    public XRRayInteractor rayInteractor;
+
+
+
+    void Start()
     {
-        if (isInteractorActive == false)
-        {
-            isInteractorActive = true;
-        }
-        else
-        {
-            isInteractorActive = false;
-        }
+
+        string actionMapName = "XRI RightHand";
+    
+        teleportAction = actionAsset.FindActionMap(actionMapName).FindAction("Teleport Start");
     }
-    void Update()
-    {
-        if (isInteractorActive)
-        {
-            leftTeleportInteractor.GetComponent<XRRayInteractor>().enabled = false;
-            Debug.Log("SHOULD NOT BE ABLE TO TELEPORT");
-        }
-        else
-        {
-             leftTeleportInteractor.GetComponent<XRRayInteractor>().enabled = true;
-        }
+
+    private void Update()
+    {   
+       if (teleportAction.ReadValue<float>() != 0)
+       {
+           rayInteractor.enabled = true;
+       }
+       else{
+           rayInteractor.enabled = false;
+       }
+
     }
 }

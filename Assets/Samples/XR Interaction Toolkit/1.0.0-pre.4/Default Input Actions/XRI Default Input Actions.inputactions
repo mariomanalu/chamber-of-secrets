@@ -672,6 +672,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Teleport Start",
+                    "type": "Value",
+                    "id": "6ef6ff88-5189-49df-98a4-dc0f12a26fae",
+                    "expectedControlType": "Integer",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -993,6 +1001,17 @@
                     "action": "Translate Anchor",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c7487ebc-20a7-4608-baa8-85a031e3c60c",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Teleport Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
