@@ -4559,8 +4559,9 @@ GameObject:
   - component: {fileID: 513850806}
   - component: {fileID: 513850809}
   - component: {fileID: 513850808}
+  - component: {fileID: 513850807}
   m_Layer: 7
-  m_Name: Heaviside Text
+  m_Name: Volta Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4585,6 +4586,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0025007538, y: 5.0924935}
   m_SizeDelta: {x: 1.05, y: 0.65}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &513850807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513850805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934694f0d6a0cd4458947e73b85c5151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 513850808}
+  controller: {fileID: 1464811728}
 --- !u!114 &513850808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4605,7 +4620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: COMING SOON
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6274,7 +6289,7 @@ GameObject:
   - component: {fileID: 673824487}
   - component: {fileID: 673824486}
   m_Layer: 7
-  m_Name: Heaviside Picture
+  m_Name: Volta Picture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10437,8 +10452,9 @@ Transform:
   - {fileID: 1610138430}
   - {fileID: 468647448}
   - {fileID: 1929659326}
+  - {fileID: 2126649590}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070760654
 GameObject:
@@ -11694,6 +11710,7 @@ GameObject:
   - component: {fileID: 1257003545}
   - component: {fileID: 1257003548}
   - component: {fileID: 1257003547}
+  - component: {fileID: 1257003546}
   m_Layer: 7
   m_Name: Lecture Text
   m_TagString: Untagged
@@ -11720,6 +11737,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0025007538, y: 5.0924935}
   m_SizeDelta: {x: 1.05, y: 0.65}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1257003546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257003544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15bfb8334c610d043b161ce40c80f571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 1257003547}
+  controller: {fileID: 1288160415}
 --- !u!114 &1257003547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11740,7 +11771,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: COMING SOON
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12868,6 +12899,7 @@ GameObject:
   - component: {fileID: 1311493344}
   - component: {fileID: 1311493347}
   - component: {fileID: 1311493346}
+  - component: {fileID: 1311493345}
   m_Layer: 7
   m_Name: Presidency Text
   m_TagString: Untagged
@@ -12894,6 +12926,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0025007538, y: 5.0924935}
   m_SizeDelta: {x: 1.05, y: 0.65}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1311493345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311493343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbec832fe0809f341a858520f1715ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 1311493346}
+  controller: {fileID: 1296253350}
 --- !u!114 &1311493346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12914,7 +12960,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: COMING SOON
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14756,7 +14802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478957573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.307241, y: 0.012901306, z: 2.933734}
+  m_LocalPosition: {x: -5.307241, y: 0.012901306, z: 3.916}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1485756290}
@@ -14864,7 +14910,7 @@ Transform:
   - {fileID: 1022925296}
   - {fileID: 1333317182}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489959226 stripped
 GameObject:
@@ -15441,7 +15487,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1577669261492102, guid: 133c58b898e960a479016fbe4c3442c9, type: 3}
       propertyPath: m_Name
-      value: Heaviside Stand
+      value: Volta Stand
       objectReference: {fileID: 0}
     - target: {fileID: 1865663946578524, guid: 133c58b898e960a479016fbe4c3442c9, type: 3}
       propertyPath: m_Layer
@@ -23682,8 +23728,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126649589}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.607241, y: 0.8980987, z: 12.408266}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2043083447}
@@ -23696,8 +23742,8 @@ Transform:
   - {fileID: 1594839417}
   - {fileID: 714295310}
   - {fileID: 1140385350}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1053308885}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2134608295
 GameObject:
