@@ -16,7 +16,7 @@ MonoBehaviour:
     m_Keys:
     - 
     m_Values: 01
-  RevisionSummary: Fixed negative page-numbering using modulo arithmetic
+  RevisionSummary: Added a two magnet mini-scene. Save scene.
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0

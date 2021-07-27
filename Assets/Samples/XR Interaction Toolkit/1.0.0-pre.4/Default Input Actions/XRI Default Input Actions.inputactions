@@ -675,9 +675,9 @@
                 },
                 {
                     "name": "Teleport Start",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "6ef6ff88-5189-49df-98a4-dc0f12a26fae",
-                    "expectedControlType": "Integer",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -737,61 +737,6 @@
                     "action": "Rotation",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "62690862-4688-4010-975b-b3d9c6062157",
-                    "path": "<XRController>{RightHand}/Primary2DAxis",
-                    "interactions": "Sector(directions=1)",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Teleport Mode Activate",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "90efd65e-3290-4798-af15-21ab4d7848b5",
-                    "path": "<XRController>{RightHand}/primaryButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Teleport Mode Activate",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "de466e6e-12bf-46a1-b0fd-ffbc343f3399",
-                    "path": "<XRController>{RightHand}/gripPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Teleport Mode Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "919c4a6c-22ed-4083-8e14-f30e91ff59fe",
-                    "path": "<XRController>{RightHand}/Primary2DAxis",
-                    "interactions": "Sector(directions=-1,sweepBehavior=3)",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Teleport Select",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f7e6d19f-8306-47c9-8ca9-d3b6137565dc",
-                    "path": "<XRController>{RightHand}/primaryButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Teleport Select",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 },
                 {
                     "name": "Vector 3 Fallback",
@@ -1010,6 +955,28 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Teleport Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e678d6d7-b540-4d72-ae4d-a2dff227cd98",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Teleport Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ddc68d32-303b-4757-be7b-1879928273e7",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Teleport Mode Activate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
