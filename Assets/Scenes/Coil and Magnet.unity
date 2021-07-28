@@ -7162,7 +7162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   computeShader: {fileID: 7200000, guid: 8554d4f6ab4486a4dbc18923cc120971, type: 3}
   fieldType: 1
-  isDynamic: 0
+  isDynamic: 1
 --- !u!114 &723345108
 MonoBehaviour:
   m_ObjectHideFlags: 0

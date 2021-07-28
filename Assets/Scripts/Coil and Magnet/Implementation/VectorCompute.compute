@@ -76,8 +76,15 @@ void Electric(uint3 id : SV_DispatchThreadID) {
         {
             // The zeroth index of _VectorArgs is unused so that the two buffers align.
             float3 displacement = _Positions[id.x] - _VectorArgs[i];
-            float distanceSquared = pow(length(displacement),2);   
-            result += cross(_VelocityArgs[i], displacement)/distanceSquared;
+            float distanceSquared = pow(length(displacement),2);
+            if (fmod(i,2) == 0)
+            {   
+                result += cross(_VelocityArgs[i], displacement)/distanceSquared;
+            }
+            else
+            {
+                result -= cross(_VelocityArgs[i], displacement)/distanceSquared;
+            }
         }
         _Vectors[id.x] = result;
     }
