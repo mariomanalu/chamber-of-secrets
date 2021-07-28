@@ -14,9 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Objects/My Custom Object.meta
+    - Assets/Objects/My Custom Object/Glass floor.prefab
+    - Assets/Objects/My Custom Object/Glass floor.prefab.meta
+    - Assets/Samples/XR Interaction Toolkit/1.0.0-pre.4/Default Input Actions/XRI
+      Default Input Actions.inputactions
+    - Assets/Scripts/Citation.cs
     - 
-    m_Values: 01
-  RevisionSummary: Added a two magnet mini-scene. Save scene.
+    m_Values: 000000000000
+  RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0

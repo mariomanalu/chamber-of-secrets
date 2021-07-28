@@ -16,112 +16,73 @@ public class TeleportManager : MonoBehaviour
     /// The input action asset storing the "Teleport Start" action.
     /// </summary>
     [SerializeField]
-    InputActionAsset actionAsset;
-
-    /// <summary>
-    /// The "Teleport Start" action. 
-    /// </summary>
-    private InputAction teleportAction;
-
-    /// <summary>
-    /// The <cref>XRRayInteractor</cref> with which the user selects a teleport location. 
-    /// </summary>
-    public XRRayInteractor rayInteractor;
-
-    // [SerializeField]
-    // XRRayInteractor UIRayInteractor;
+    private InputActionAsset actionAsset;
 
     [SerializeField]
-    TeleportationProvider provider;
+    private TeleportationProvider provider;
+    private InputAction _thumbstick;
 
     [SerializeField]
-    GameObject reticulePrefab;
-    GameObject reticuleInstance;
+    private XRRayInteractor rayInteractor;
 
-    //public bool isUIRayActive = false;
+    private bool _isActive;
     void Start()
     {
+        rayInteractor.enabled = false;
 
-        string actionMapName = "XRI RightHand";
-    
-        teleportAction = actionAsset.FindActionMap(actionMapName).FindAction("Teleport Start");
+        var activate = actionAsset.FindActionMap("XRI RightHand").FindAction("Teleport Start");
+        activate.Enable();
+        activate.performed += OnTeleportActivate;
+        
+        var cancel = actionAsset.FindActionMap("XRI RightHand").FindAction("Teleport Mode Cancel");
+        cancel.Enable();
+        cancel.performed += OnTeleportCancel;
+        
+        _thumbstick = actionAsset.FindActionMap("XRI RightHand").FindAction("Move");
+        _thumbstick.Enable();
+    }
+
+    void Update()
+    {
+        if (!_isActive)
+        {
+            return;
+        }
+
+        if(_thumbstick.triggered)
+        {
+            return;
+        }
+
+        if(!rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
+        {
+            //rayInteractor.enabled = false;
+            _isActive = false;
+            return;
+        }
+
+        TeleportRequest request = new TeleportRequest()
+        {
+            destinationPosition = hit.point,
+        };
+
+        provider.QueueTeleportRequest(request);
         //rayInteractor.enabled = false;
+        //_isActive = false;
     }
 
-    private void Update()
-    {  
-        if (teleportAction.ReadValue<float>() != 0)// && !isUIRayActive)
-       {
-           rayInteractor.enabled = true;
-           
-           teleportDestination destination = CheckLocation();
-            if(destination.validDestination)
-            {
-                // Create and file a teleportation request. 
-                TeleportRequest request = new TeleportRequest()
-                {
-                    destinationPosition = destination.location,
-                };
-                provider.QueueTeleportRequest(request);
-            } 
-       }
-       else
-       {
-           rayInteractor.enabled = false;
-       }
-       
-    }
-
-    // public void DeactivateUIRay()
-    // {
-    //     isUIRayActive = false;
-    // }
-
-    // public void ActivateUIRay()
-    // {
-    //     isUIRayActive = true;
-    // }
-    struct teleportDestination
+    private void OnTeleportActivate(InputAction.CallbackContext context)
     {
-        public Vector3 location;
-        public bool validDestination;
-        public Vector3 normal;
+        Debug.Log("IN OnTeleportActive");
+        rayInteractor.enabled = true;
+        Debug.Log("Ray Interactor is enabled");
+        _isActive = true;
     }
 
-    teleportDestination CheckLocation()
+    private void OnTeleportCancel(InputAction.CallbackContext context)
     {
-        teleportDestination destination = new teleportDestination();
-        destination.validDestination = false;
-
-        // Check that the interactor is enabled and pointing at something. 
-        if (!(rayInteractor.enabled))
-        {
-            return destination;
-        }
-        if (!rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
-        {
-            return destination;
-        }
-        // Verify that the user can teleport to the selected location. 
-        TeleportationArea anchor = hit.transform.GetComponent<TeleportationArea>();
-        if (anchor)
-        {
-            destination.validDestination = true;
-            destination.location = anchor.transform.position;
-            //destination.normal = anchor.transform.position.up;
-        }
-        else if (hit.transform.GetComponent<TeleportationArea>())
-        {
-            destination.validDestination = true;
-            destination.location = hit.point;
-            //destination.normal = hit.normal;
-        }
-        else
-        {
-            destination.validDestination = false;
-            
-            return destination;
-        }
-        return destination;
+        Debug.Log("IN OnTeleportCancel");
+        rayInteractor.enabled = false;
+        _isActive = false;
     }
 }
