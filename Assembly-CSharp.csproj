@@ -51,7 +51,6 @@
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorField.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\NewtonText.cs" />
      <Compile Include="Assets\Scripts\Citation.cs" />
-     <Compile Include="Assets\Scripts\Custom Locomotion System\TeleportManager.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\OerstedText.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\MaxwellText.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\SideButton.cs" />
