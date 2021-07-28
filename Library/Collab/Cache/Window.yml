@@ -14,15 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Objects/My Custom Object.meta
-    - Assets/Objects/My Custom Object/Glass floor.prefab
-    - Assets/Objects/My Custom Object/Glass floor.prefab.meta
-    - Assets/Samples/XR Interaction Toolkit/1.0.0-pre.4/Default Input Actions/XRI
-      Default Input Actions.inputactions
-    - Assets/Scripts/Citation.cs
+    - Assets/Scripts/Coil and Magnet/MagnetController.cs
+    - Assets/Scripts/Coil and Magnet/MagnetController.cs.meta
     - 
-    m_Values: 000000000000
-  RevisionSummary: 
+    m_Values: 010101
+  RevisionSummary: Added another magnet mini experiment
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0
