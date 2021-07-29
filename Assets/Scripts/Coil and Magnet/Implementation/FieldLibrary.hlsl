@@ -11,12 +11,6 @@
 //      in VectorFields.cs. MAKE SURE that the order of this list is the same as the
 //      order of the lines at the top of VectorCompute.compute. 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-float3 Outwards(float3 position, int index)
-{
-    return position;
-};
-
-
 float3 Magnetic(float3 position, int index)
 {
     float3 vect = float3(0.0, 0.0, 0.0);

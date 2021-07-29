@@ -1,4 +1,3 @@
-#pragma kernel OutwardsField
 #pragma kernel MagneticField
 #pragma kernel Electric
 // The buffer storing the positions
@@ -89,7 +88,4 @@ void Electric(uint3 id : SV_DispatchThreadID) {
         _Vectors[id.x] = result;
     }
 }
-
-
-KERNEL_NAME(Outwards)
 KERNEL_NAME(Magnetic)
