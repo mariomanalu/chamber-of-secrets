@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\UI Scripts\SideButton.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\FieldDetector.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\PresidencyText.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\MagnetController.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\Magnetic.cs" />
      <Compile Include="Assets\Scripts\Coil and Magnet\Implementation\VectorDisplay.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\LectureText.cs" />
@@ -68,7 +69,8 @@
      <Compile Include="Assets\Scripts\UI Scripts\GUIPanel.cs" />
      <Compile Include="Assets\Objects\Futuristic Environment\Common Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\FaradayText.cs" />
-     <Compile Include="Assets\Scripts\Coil and Magnet\MagnetController.cs" />
+     <Compile Include="Assets\Scripts\Force Measurement\Attractive.cs" />
+     <Compile Include="Assets\MagneticbutSouthPolesOnly.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\computeShader.compute" />
