@@ -30,8 +30,8 @@ public class Magnetic : MonoBehaviour
     GameObject northPole, southPole;
     // The arrays used to initialize the argument buffers. 
 
-    // The north pole is assumed to be negatively-charged
-    // Consequently, the south pole is assumed to be positively-charged
+    // The north pole is assumed to be positively-charged
+    // Consequently, the south pole is assumed to be negatively-charged
     [NonSerialized]
     private float[] floatArray = { 2f, 3f, -3f };
 
