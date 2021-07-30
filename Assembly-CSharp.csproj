@@ -69,15 +69,15 @@
      <Compile Include="Assets\Scripts\UI Scripts\GUIPanel.cs" />
      <Compile Include="Assets\Objects\Futuristic Environment\Common Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\FaradayText.cs" />
-     <Compile Include="Assets\Scripts\Force Measurement\Attractive.cs" />
-     <Compile Include="Assets\Scripts\Three Magnets\MagneticbutSouthPolesOnly.cs" />
-     <Compile Include="Assets\Scripts\Three Magnets\RotateMiddleMagnet.cs" />
+     <Compile Include="Assets\Scripts\Coil and Magnet\PlanePosition.cs" />
+     <Compile Include="Assets\LightningBolt\LightningBoltScript.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\computeShader.compute" />
      <None Include="Assets\Scripts\Coil and Magnet\FieldLibrary.hlsl" />
      <None Include="Assets\Hands\license.txt" />
      <None Include="Assets\Scripts\Coil and Magnet\Shader.shader" />
+     <None Include="Assets\LightningBolt\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\Implementation\VectorDisplay.compute" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
@@ -101,6 +101,7 @@
      <None Include="Assets\Objects\Wristwatch\Shaders\AO.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\Implementation\RectPoints.compute" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Scripts\Coil and Magnet\Left Magnet Shader.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Scripts\Coil and Magnet\PointsPlot.hlsl" />
