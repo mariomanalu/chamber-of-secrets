@@ -14,16 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scripts/Force Measurement.meta
-    - Assets/Scripts/Force Measurement/Attractive.cs
-    - Assets/Scripts/Force Measurement/Attractive.cs.meta
-    - Assets/Scripts/Three Magnets.meta
-    - Assets/Scripts/Three Magnets/MagneticbutSouthPolesOnly.cs
-    - Assets/Scripts/Three Magnets/MagneticbutSouthPolesOnly.cs.meta
-    - Assets/Scripts/Three Magnets/RotateMiddleMagnet.cs
-    - Assets/Scripts/Three Magnets/RotateMiddleMagnet.cs.meta
+    - Assets/Objects/model.meta
+    - Assets/Objects/model/model.meta
+    - Assets/Objects/model/model/model.dae
+    - Assets/Objects/model/model/model.dae.meta
+    - Assets/Objects/model/model/textures.meta
+    - Assets/Objects/model/model/textures/Battery.mat
+    - Assets/Objects/model/model/textures/Battery.mat.meta
+    - Assets/Objects/model/model/textures/M_Engine_Plastic_AO.jpg
+    - Assets/Objects/model/model/textures/M_Engine_Plastic_AO.jpg.meta
+    - Assets/Objects/model/model/textures/M_Engine_Plastic_albedo.jpg
+    - Assets/Objects/model/model/textures/M_Engine_Plastic_albedo.jpg.meta
+    - Assets/Objects/model/model/textures/M_Engine_Plastic_metallic.jpg
+    - Assets/Objects/model/model/textures/M_Engine_Plastic_metallic.jpg.meta
+    - Assets/Objects/model/model/textures/M_Engine_Plastic_normal.png
+    - Assets/Objects/model/model/textures/M_Engine_Plastic_normal.png.meta
+    - Assets/Objects/model/model/textures/M_Engine_Plastic_roughness.jpg
+    - Assets/Objects/model/model/textures/M_Engine_Plastic_roughness.jpg.meta
+    - Assets/Scripts/Citation.cs
     - 
-    m_Values: 000000000000000000
+    m_Values: 00000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
