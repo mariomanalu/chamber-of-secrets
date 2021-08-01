@@ -14,49 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Objects/LightningBolt.meta
-    - Assets/Objects/LightningBolt/Demo.meta
-    - Assets/Objects/LightningBolt/Demo/LightningBoltDemo.unity
-    - Assets/Objects/LightningBolt/Demo/LightningBoltDemo.unity.meta
-    - Assets/Objects/LightningBolt/Demo/LightningBoltDemoObjects.unity
-    - Assets/Objects/LightningBolt/Demo/LightningBoltDemoObjects.unity.meta
-    - Assets/Objects/LightningBolt/Demo/LightningBoltDemoObjectsSettings.lighting
-    - Assets/Objects/LightningBolt/Demo/LightningBoltDemoObjectsSettings.lighting.meta
-    - Assets/Objects/LightningBolt/Demo/LightningBoltDemoSettings.lighting
-    - Assets/Objects/LightningBolt/Demo/LightningBoltDemoSettings.lighting.meta
-    - Assets/Objects/LightningBolt/Editor.meta
-    - Assets/Objects/LightningBolt/Editor/LightningBoltEditor.cs
-    - Assets/Objects/LightningBolt/Editor/LightningBoltEditor.cs.meta
-    - Assets/Objects/LightningBolt/Editor/LightningBoltLogo.png
-    - Assets/Objects/LightningBolt/Editor/LightningBoltLogo.png.meta
-    - Assets/Objects/LightningBolt/LightningBoltMaterialAdditive.mat
-    - Assets/Objects/LightningBolt/LightningBoltMaterialAdditive.mat.meta
-    - Assets/Objects/LightningBolt/LightningBoltMaterialAlphaBlend.mat
-    - Assets/Objects/LightningBolt/LightningBoltMaterialAlphaBlend.mat.meta
-    - Assets/Objects/LightningBolt/LightningBoltMaterialAnimatedAdditive.mat
-    - Assets/Objects/LightningBolt/LightningBoltMaterialAnimatedAdditive.mat.meta
-    - Assets/Objects/LightningBolt/LightningBoltScript.cs
-    - Assets/Objects/LightningBolt/LightningBoltScript.cs.meta
-    - Assets/Objects/LightningBolt/Readme.txt
-    - Assets/Objects/LightningBolt/Readme.txt.meta
-    - Assets/Objects/LightningBolt/SimpleLightningBoltAnimatedPrefab.prefab
-    - Assets/Objects/LightningBolt/SimpleLightningBoltAnimatedPrefab.prefab.meta
-    - Assets/Objects/LightningBolt/SimpleLightningBoltPrefab.prefab
-    - Assets/Objects/LightningBolt/SimpleLightningBoltPrefab.prefab.meta
-    - Assets/Objects/LightningBolt/Textures.meta
-    - Assets/Objects/LightningBolt/Textures/LightningBoltTexture.png
-    - Assets/Objects/LightningBolt/Textures/LightningBoltTexture.png.meta
-    - Assets/Objects/LightningBolt/Textures/LightningSpriteSheet1.png
-    - Assets/Objects/LightningBolt/Textures/LightningSpriteSheet1.png.meta
-    - Assets/Objects/LightningBolt/Textures/LightningSpriteSheet2.png
-    - Assets/Objects/LightningBolt/Textures/LightningSpriteSheet2.png.meta
-    - Assets/Objects/LightningBolt/Textures/LightningSpriteSheet3.png
-    - Assets/Objects/LightningBolt/Textures/LightningSpriteSheet3.png.meta
-    - Assets/Scripts/Magnet/Implementation/Magnetic.cs
-    - Assets/Scripts/Magnet/Two Magnets/TwoMagnets.cs
     - 
-    m_Values: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  RevisionSummary: 
+    m_Values: 01
+  RevisionSummary: Fixed the warning that gets triggered everytime the right hand
+    trigger button is pressed
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0

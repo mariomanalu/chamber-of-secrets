@@ -578,6 +578,38 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Thumb Touch",
+                    "type": "Button",
+                    "id": "4c8ae7f4-02b0-4333-8e1a-81baea09ae64",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pinch Touch",
+                    "type": "Button",
+                    "id": "35aedfba-a667-44ed-84ea-3a26b846abea",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Grip",
+                    "type": "Value",
+                    "id": "f18c24b4-d1bb-467f-87c2-2082ceff0b8d",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pinch",
+                    "type": "Value",
+                    "id": "a64059a1-d093-4ee8-b3f5-ead5ab8dd659",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Rotation",
                     "type": "Value",
                     "id": "ee6bf5bf-bb0a-4a50-8327-cb654b19e298",
@@ -670,14 +702,6 @@
                     "type": "Value",
                     "id": "6f7cf253-7062-443b-b10f-2be48a33f027",
                     "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Teleport Start",
-                    "type": "Value",
-                    "id": "6ef6ff88-5189-49df-98a4-dc0f12a26fae",
-                    "expectedControlType": "Double",
                     "processors": "",
                     "interactions": ""
                 }
@@ -949,17 +973,6 @@
                 },
                 {
                     "name": "",
-                    "id": "c7487ebc-20a7-4608-baa8-85a031e3c60c",
-                    "path": "<XRController>{RightHand}/triggerPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Teleport Start",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "14ebcd1c-bf01-45e3-89be-f5852bc38ad5",
                     "path": "<XRController>{RightHand}/gripPressed",
                     "interactions": "",
@@ -977,6 +990,50 @@
                     "processors": "",
                     "groups": "Continuous Move",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e6b20c72-ff4e-4de0-9433-21e1f0422d8b",
+                    "path": "<XRController>{RightHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller;Continuous Move",
+                    "action": "Pinch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "027b41a1-880a-47bc-b048-3304665ac39d",
+                    "path": "<XRController>{RightHand}/grip",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller;Continuous Move",
+                    "action": "Grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "18365cf1-ed7b-4586-8a80-aa362243f051",
+                    "path": "<XRController>{RightHand}/triggerTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pinch Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "63d4edff-2471-48e1-b87d-af472196474c",
+                    "path": "<XRController>{RightHand}/primaryTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thumb Touch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
