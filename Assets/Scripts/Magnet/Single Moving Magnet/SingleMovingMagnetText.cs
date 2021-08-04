@@ -107,7 +107,7 @@ public class SingleMovingMagnetText : MonoBehaviour
                     display.SetText($"Electric fields originate from electric charges, or from changing magnetic fields.");
                     break;
                 case 4:
-                    display.SetText($"Mathematically, the electric field is a vector field which is associated with the Coulomb force experienced by a test charge at a point.");
+                    display.SetText($"The electric field is a vector field associated with the Coulomb force experienced by a test charge at a point.");
                     break;
                 case 5:
                     display.SetText($"If the field is created by a positive charge, the electric field will be in radially outward direction.");

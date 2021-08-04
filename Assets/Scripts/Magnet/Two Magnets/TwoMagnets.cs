@@ -105,7 +105,7 @@ public class TwoMagnets: MonoBehaviour
                 display.SetText($"and inversely proportional to the square of the distance between them.");
                 break;
             case 13:
-                display.SetText($"Based on Coulomb's Law, the magnitude of the electrostatic force is {force} N");
+                display.SetText($"Assuming that the charges are -3 and 3, the magnitude of the electrostatic force is {force} N");
                 break;
         }
     }

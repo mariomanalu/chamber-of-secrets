@@ -32,7 +32,7 @@ public class PresidencyText : MonoBehaviour
                 display.SetText($"Many claim that he was also offered a knighthood, but declined this honor as well.");
                 break;
             case 4:
-                display.SetText($"Pictured, is an illustration of three leaders of the Royal society offering Faraday the presidency.");
+                display.SetText($"Pictured is an illustration of three leaders of the Royal society offering Faraday the presidency.");
                 break;
         }
     }

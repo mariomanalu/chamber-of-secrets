@@ -12,10 +12,10 @@ public class NewtonText : MonoBehaviour
     ControllerButton controller;
     
     void Update(){
-        int pageNumber = controller.pageNumber % 5;
+        int pageNumber = controller.pageNumber % 6;
         if (pageNumber < 0)
         {
-            pageNumber += 5;
+            pageNumber += 6;
         }
         switch(pageNumber)
         {
@@ -32,6 +32,9 @@ public class NewtonText : MonoBehaviour
                 display.SetText($"He also believed that force always acted in straight lines.");
                 break;
             case 4:
+                display.SetText($"His belief was widely accepted until later when Faraday showed that force");
+                break;
+            case 5:
                 display.SetText($"This Newtonian conceptualization of force is often referred to as action at a distance.");
                 break;
         }

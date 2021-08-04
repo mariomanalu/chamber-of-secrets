@@ -38,9 +38,6 @@ public class FaradayText : MonoBehaviour
             case 5:
                 display.SetText($"He imagined electric and magnetic force completely filling space, and not acting in straight lines.");
                 break;
-            case 6:
-                display.SetText($"For this reason, many of his theories were initially received with immense skepticism.");
-                break;
         }
     }
 }

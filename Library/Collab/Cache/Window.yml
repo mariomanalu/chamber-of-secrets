@@ -85,16 +85,21 @@ MonoBehaviour:
     - Assets/QuickOutline/Scripts/Outline.cs
     - Assets/QuickOutline/Scripts/Outline.cs.meta
     - Assets/Scenes/Coil and Magnet.unity
+    - Assets/Scripts/Magnet/Coil and Magnet/CoilAndMagnet.cs
     - Assets/Scripts/Magnet/Coil and Magnet/GenerateLightning.cs
     - Assets/Scripts/Magnet/Coil and Magnet/GenerateLightning.cs.meta
+    - Assets/Scripts/Magnet/Interactable Magnet.meta
+    - Assets/Scripts/Magnet/Interactable Magnet/InteractableMagnetText.cs
+    - Assets/Scripts/Magnet/Interactable Magnet/InteractableMagnetText.cs.meta
     - Assets/Scripts/Magnet/Single Moving Magnet/SingleMovingMagnetControllerButton.cs
     - Assets/Scripts/Magnet/Single Moving Magnet/SingleMovingMagnetControllerButton.cs.meta
     - Assets/Scripts/Magnet/Single Moving Magnet/SingleMovingMagnetText.cs
     - Assets/Scripts/Magnet/Two Magnets/TwoMagnets.cs
+    - Assets/Scripts/Picture Text Script/ControllerButton.cs
     - Assets/Scripts/UI Scripts/GUIPanel.cs
     - 
-    m_Values: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  RevisionSummary: 
+    m_Values: 010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+  RevisionSummary: Polished all the remaining experiences
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0

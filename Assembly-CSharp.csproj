@@ -74,6 +74,7 @@
      <Compile Include="Assets\Objects\Futuristic Environment\Common Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\FaradayText.cs" />
      <Compile Include="Assets\Scripts\Magnet\Single Moving Magnet\SingleMovingMagnetControllerButton.cs" />
+     <Compile Include="Assets\Scripts\Magnet\Interactable Magnet\InteractableMagnetText.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Magnet\computeShader.compute" />
