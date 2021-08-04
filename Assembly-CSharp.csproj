@@ -38,7 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Scripts\Magnet\Implementation\Display.cs" />
-     <Compile Include="Assets\Scripts\Magnet\Implementation\MoveMagnet.cs" />
+     <Compile Include="Assets\Scripts\Magnet\Single Moving Magnet\MoveMagnet.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\ControllerButton.cs" />
      <Compile Include="Assets\Scripts\Magnet\SouthPole.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\Warning.cs" />
@@ -73,6 +73,7 @@
      <Compile Include="Assets\Objects\Futuristic Environment\Common Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\FaradayText.cs" />
      <Compile Include="Assets\GenerateLightning.cs" />
+     <Compile Include="Assets\Scripts\Magnet\Single Moving Magnet\SingleMovingMagnetText.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Magnet\computeShader.compute" />

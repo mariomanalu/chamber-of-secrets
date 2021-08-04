@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scripts/UI Scripts/SideButton.cs
+    - Assets/Scripts/UI Scripts/GUIPanel.cs
     - 
     m_Values: 0000
   RevisionSummary: 

@@ -9,9 +9,15 @@ public class MoveMagnet : MonoBehaviour
     
     public bool isPaused;
     
+    [SerializeField]
+    GameObject magnet;
+
+    private Vector3 magnetPosition;
     void Start(){
-        sliderValue = -2.138f;
+        sliderValue = 25.1619f;
         isPaused = true;
+
+        magnetPosition = magnet.transform.position;
     }
     // Update is called once per frame
     void Update()
@@ -19,9 +25,7 @@ public class MoveMagnet : MonoBehaviour
         // If NOT paused
         if (!isPaused)
         {
-            transform.position = new Vector3(2 * Mathf.Cos(Mathf.PI  * sliderValue * .1f) - .138f, 1.467f, 0.345f);
-            //Debug.Log("SliderValue " + sliderValue);
-            //Debug.Log("Position x " + transform.position.x);
+            transform.position = new Vector3(2 * Mathf.Cos(Mathf.PI  * sliderValue * .1f) - .138f, magnetPosition.y, magnetPosition.z);
         }
     }
 }
