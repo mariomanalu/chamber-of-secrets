@@ -14,9 +14,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Objects/Battery.meta
+    - Assets/Objects/Battery/model.meta
+    - Assets/Objects/Battery/model/model.dae
+    - Assets/Objects/Battery/model/model.dae.meta
+    - Assets/Objects/Battery/model/textures.meta
+    - Assets/Objects/Battery/model/textures/Battery.mat
+    - Assets/Objects/Battery/model/textures/Battery.mat.meta
+    - Assets/Objects/Battery/model/textures/M_Engine_Plastic_AO.jpg
+    - Assets/Objects/Battery/model/textures/M_Engine_Plastic_AO.jpg.meta
+    - Assets/Objects/Battery/model/textures/M_Engine_Plastic_albedo.jpg
+    - Assets/Objects/Battery/model/textures/M_Engine_Plastic_albedo.jpg.meta
+    - Assets/Objects/Battery/model/textures/M_Engine_Plastic_metallic.jpg
+    - Assets/Objects/Battery/model/textures/M_Engine_Plastic_metallic.jpg.meta
+    - Assets/Objects/Battery/model/textures/M_Engine_Plastic_normal.png
+    - Assets/Objects/Battery/model/textures/M_Engine_Plastic_normal.png.meta
+    - Assets/Objects/Battery/model/textures/M_Engine_Plastic_roughness.jpg
+    - Assets/Objects/Battery/model/textures/M_Engine_Plastic_roughness.jpg.meta
+    - Assets/Objects/Magnet/Earth Material.mat
+    - Assets/Objects/Magnet/Earth Material.mat.meta
+    - Assets/Objects/Magnet/Interactable Field Material.mat
+    - Assets/Objects/Magnet/Interactable Field Material.mat.meta
+    - Assets/Objects/Magnet/Interactable Field material.mat
+    - Assets/Objects/Magnet/Interactable Field material.mat.meta
+    - Assets/Objects/NPC.meta
+    - Assets/Objects/NPC/Isaac_Newton.fbx
+    - Assets/Objects/NPC/Isaac_Newton.fbx.meta
+    - Assets/Objects/NPC/Isaac_Tex.png
+    - Assets/Objects/NPC/Isaac_Tex.png.meta
+    - Assets/Objects/NPC/Newton Material.mat
+    - Assets/Objects/NPC/Newton Material.mat.meta
+    - Assets/Objects/Teleport Reticle.meta
+    - Assets/Objects/Teleport Reticle/Teleport Reticle Material.mat
+    - Assets/Objects/Teleport Reticle/Teleport Reticle Material.mat.meta
+    - Assets/Objects/Teleport Reticle/Teleport Reticle.prefab
+    - Assets/Objects/Teleport Reticle/Teleport Reticle.prefab.meta
+    - Assets/Objects/Teleport Reticle/vector.asset
+    - Assets/Objects/Teleport Reticle/vector.asset.meta
+    - Assets/Objects/downloadable-pixel-earth-low-poly.meta
+    - Assets/Objects/downloadable-pixel-earth-low-poly/source.meta
+    - Assets/Objects/downloadable-pixel-earth-low-poly/source/Sketchfab_2017_10_30_22_21_07.blend
+    - Assets/Objects/downloadable-pixel-earth-low-poly/source/Sketchfab_2017_10_30_22_21_07.blend.meta
+    - Assets/Objects/downloadable-pixel-earth-low-poly/textures.meta
+    - Assets/Objects/downloadable-pixel-earth-low-poly/textures/PixelEarth.mat
+    - Assets/Objects/downloadable-pixel-earth-low-poly/textures/PixelEarth.mat.meta
+    - Assets/Objects/downloadable-pixel-earth-low-poly/textures/dots_world_map_by_snowfleikun-d2z3p0y.jpg
+    - Assets/Objects/downloadable-pixel-earth-low-poly/textures/dots_world_map_by_snowfleikun-d2z3p0y.jpg.meta
+    - Assets/QuickOutline.meta
+    - Assets/QuickOutline/Readme.txt
+    - Assets/QuickOutline/Readme.txt.meta
+    - Assets/QuickOutline/Resources.meta
+    - Assets/QuickOutline/Resources/Materials.meta
+    - Assets/QuickOutline/Resources/Materials/OutlineFill.mat
+    - Assets/QuickOutline/Resources/Materials/OutlineFill.mat.meta
+    - Assets/QuickOutline/Resources/Materials/OutlineMask.mat
+    - Assets/QuickOutline/Resources/Materials/OutlineMask.mat.meta
+    - Assets/QuickOutline/Resources/Shaders.meta
+    - Assets/QuickOutline/Resources/Shaders/OutlineFill.shader
+    - Assets/QuickOutline/Resources/Shaders/OutlineFill.shader.meta
+    - Assets/QuickOutline/Resources/Shaders/OutlineMask.shader
+    - Assets/QuickOutline/Resources/Shaders/OutlineMask.shader.meta
+    - Assets/QuickOutline/Samples.meta
+    - Assets/QuickOutline/Samples/Materials.meta
+    - Assets/QuickOutline/Samples/Materials/Plane.mat
+    - Assets/QuickOutline/Samples/Materials/Plane.mat.meta
+    - Assets/QuickOutline/Samples/Scenes.meta
+    - Assets/QuickOutline/Samples/Scenes/QuickOutline.unity
+    - Assets/QuickOutline/Samples/Scenes/QuickOutline.unity.meta
+    - Assets/QuickOutline/Scripts.meta
+    - Assets/QuickOutline/Scripts/Outline.cs
+    - Assets/QuickOutline/Scripts/Outline.cs.meta
+    - Assets/Scenes/Coil and Magnet.unity
+    - Assets/Scripts/Magnet/Coil and Magnet/GenerateLightning.cs
+    - Assets/Scripts/Magnet/Coil and Magnet/GenerateLightning.cs.meta
+    - Assets/Scripts/Magnet/Single Moving Magnet/SingleMovingMagnetControllerButton.cs
+    - Assets/Scripts/Magnet/Single Moving Magnet/SingleMovingMagnetControllerButton.cs.meta
+    - Assets/Scripts/Magnet/Single Moving Magnet/SingleMovingMagnetText.cs
+    - Assets/Scripts/Magnet/Two Magnets/TwoMagnets.cs
     - Assets/Scripts/UI Scripts/GUIPanel.cs
     - 
-    m_Values: 0000
+    m_Values: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

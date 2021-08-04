@@ -28,7 +28,8 @@ public class TwoMagnets: MonoBehaviour
     [SerializeField]
     TextMeshProUGUI display;
 
-    
+    [SerializeField]
+    ControllerButton controller;
 
     // We know that throughout the game and across all the scripts that references magnets
     // the magnitude of the charges are the same namely +3 for the negative charge and -3 for the positive charge.
@@ -54,7 +55,58 @@ public class TwoMagnets: MonoBehaviour
         
         // Computing the electrostatic force equation
         float distanceSquared = Mathf.Pow(Mathf.Abs(southPoleDynamicMagnet.transform.position.z - northPoleStaticMagnet.transform.position.z),2);
-        float force = k * positiveCharge * negativeCharge / distanceSquared;
-        display.SetText("The electrostatic force between the two poles is " + force);
+        float force = Mathf.Abs(k * positiveCharge * negativeCharge / distanceSquared);
+        
+
+        int pageNumber = controller.pageNumber % 14;
+        if (pageNumber < 0)
+        {
+            pageNumber += 14;
+        }
+        switch(pageNumber)
+        {
+            case 0:
+                display.SetText($"This experience presents a scenarion in which two magnets generate a magnetic field.");
+                break;
+            case 1:
+                display.SetText($"We have seen the magnetic field of a single moving bar magnet in the previous experience.");
+                break;
+            case 2:
+                display.SetText($"Now, what happens to the field visualizations when a magnet is moving into or away from another magnet?");
+                break;
+            case 3:
+                display.SetText($"Text books often picture that there is a constant number of magnetic field lines between two magnets.");
+                break;
+            case 4:
+                display.SetText($"That kind of visualization is misleading.");
+                break;
+            case 5:
+                display.SetText($"It is misleading because there is no particular number that represents the number of magnetic field lines.");
+                break;
+            case 6:
+                display.SetText($"A key concept this experience illustrates is that magnetic field lines always fill in the space between the magnets.");
+                break;
+            case 7:
+                display.SetText($"Another key concept demonstrated in this experience is electrostatic force.");
+                break;
+            case 8:
+                display.SetText($"Electrostatic force is the force between two point charges.");
+                break;
+            case 9:
+                display.SetText($"The ideas behind it is summarized by Coulomb's Law that states that");
+                break;
+            case 10:
+                display.SetText($"The magnitude of the electrostatic force of attraction or repulsion between two point charges is");
+                break;
+            case 11:
+                display.SetText($"directly proportional to the product of the magnitudes of charges");
+                break;
+            case 12:
+                display.SetText($"and inversely proportional to the square of the distance between them.");
+                break;
+            case 13:
+                display.SetText($"Based on Coulomb's Law, the magnitude of the electrostatic force is {force} N");
+                break;
+        }
     }
 }

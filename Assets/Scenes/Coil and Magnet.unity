@@ -5682,7 +5682,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 703505699}
-        m_TargetAssemblyTypeName: ControllerButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: SingleMovingMagnetControllerButton, Assembly-CSharp
         m_MethodName: NextPage
         m_Mode: 1
         m_Arguments:
@@ -8356,7 +8356,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 703505699}
-        m_TargetAssemblyTypeName: ControllerButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: SingleMovingMagnetControllerButton, Assembly-CSharp
         m_MethodName: PreviousPage
         m_Mode: 1
         m_Arguments:
@@ -8743,10 +8743,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 703505697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cc7a9c8dfff1574499b8100fa358900, type: 3}
+  m_Script: {fileID: 11500000, guid: b6dfe0bdf0945dc4e9fd3e25e8e08978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pageNumber: 0
+  magneticFieldDescriptionPageNum: 0
+  electricFieldDescriptionPageNum: 0
+  field: {fileID: 981665091}
 --- !u!1 &708111482
 GameObject:
   m_ObjectHideFlags: 0
@@ -19158,6 +19160,7 @@ MonoBehaviour:
   northPoleStaticMagnet: {fileID: 731572822}
   material: {fileID: 2100000, guid: 7c538b559436cd54aa080a9324145a7a, type: 2}
   display: {fileID: 1517770968}
+  controller: {fileID: 0}
 --- !u!1001 &1441118487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19873,6 +19876,7 @@ GameObject:
   - component: {fileID: 1517770966}
   - component: {fileID: 1517770969}
   - component: {fileID: 1517770968}
+  - component: {fileID: 1517770967}
   m_Layer: 0
   m_Name: Two Magnets Text
   m_TagString: Untagged
@@ -19899,6 +19903,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0025007538, y: 5.0924935}
   m_SizeDelta: {x: 1.05, y: 0.65}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1517770967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517770965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5f0c9ad1a419746ac322b38a1bce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  northPoleDynamicMagnet: {fileID: 1530383563}
+  southPoleDynamicMagnet: {fileID: 1278713850}
+  northPoleStaticMagnet: {fileID: 731572822}
+  material: {fileID: 2100000, guid: 7c538b559436cd54aa080a9324145a7a, type: 2}
+  display: {fileID: 1517770968}
+  controller: {fileID: 1212018391}
 --- !u!114 &1517770968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26589,7 +26611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983279274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 1, z: 12.21}
+  m_LocalPosition: {x: -1, y: 1, z: -5.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 305241054}

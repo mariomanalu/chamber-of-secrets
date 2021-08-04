@@ -36,7 +36,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Scripts\Magnet\Implementation\Display.cs" />
      <Compile Include="Assets\Scripts\Magnet\Single Moving Magnet\MoveMagnet.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\ControllerButton.cs" />
@@ -48,6 +47,7 @@
      <Compile Include="Assets\Hands\HandMotion.cs" />
      <Compile Include="Assets\Objects\LightningBolt\LightningBoltScript.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\VoltaText.cs" />
+     <Compile Include="Assets\Scripts\Magnet\Coil and Magnet\GenerateLightning.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\CoulombText.cs" />
      <Compile Include="Assets\Scripts\Magnet\Implementation\VectorField.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\NewtonText.cs" />
@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Picture Text Script\OerstedText.cs" />
      <Compile Include="Assets\Scripts\Magnet\Two Magnets\TwoMagnets.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\MaxwellText.cs" />
+     <Compile Include="Assets\Scripts\Magnet\Single Moving Magnet\SingleMovingMagnetText.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\SideButton.cs" />
      <Compile Include="Assets\Scripts\Magnet\Implementation\FieldDetector.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\PresidencyText.cs" />
@@ -72,8 +73,7 @@
      <Compile Include="Assets\Scripts\UI Scripts\GUIPanel.cs" />
      <Compile Include="Assets\Objects\Futuristic Environment\Common Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\FaradayText.cs" />
-     <Compile Include="Assets\GenerateLightning.cs" />
-     <Compile Include="Assets\Scripts\Magnet\Single Moving Magnet\SingleMovingMagnetText.cs" />
+     <Compile Include="Assets\Scripts\Magnet\Single Moving Magnet\SingleMovingMagnetControllerButton.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Magnet\computeShader.compute" />
@@ -85,7 +85,6 @@
      <None Include="Assets\Scripts\Magnet\Implementation\VectorDisplay.compute" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Assets\Scripts\Magnet\Implementation\FieldLibrary.hlsl" />
      <None Include="Assets\Scripts\Magnet\Implementation\VectorShader.shader" />
      <None Include="Assets\Scripts\Magnet\Implementation\VectorCompute.compute" />
@@ -97,7 +96,6 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\QuickOutline\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Scripts\Magnet\Implementation\PointsPlot.hlsl" />
      <None Include="Assets\Scripts\Magnet\Coil and Magnet\PointsPlot.hlsl" />
@@ -110,7 +108,6 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Scripts\Magnet\PointsPlot.hlsl" />
-     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Objects\Futuristic Environment\Readme_Please.txt" />

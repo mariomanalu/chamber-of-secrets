@@ -9,7 +9,7 @@ public class SingleMovingMagnetText : MonoBehaviour
     TextMeshProUGUI display;
 
     [SerializeField]
-    ControllerButton controller;
+    SingleMovingMagnetControllerButton controller;
 
     [SerializeField]
     VectorField field;
@@ -17,8 +17,8 @@ public class SingleMovingMagnetText : MonoBehaviour
 
     private int numOfElectricFieldDescriptionPages;
     void Start(){
-        numOfMagneticFieldDescriptionPages = 14; // for now
-        numOfElectricFieldDescriptionPages = 13; // for now
+        numOfMagneticFieldDescriptionPages = 15;
+        numOfElectricFieldDescriptionPages = 14; 
         
     }
     void Update(){
@@ -31,7 +31,7 @@ public class SingleMovingMagnetText : MonoBehaviour
         // If the magnetic field is presented
         if (fieldType == 0)
         {   
-            pageNumber = controller.pageNumber % numOfMagneticFieldDescriptionPages;
+            pageNumber = controller.magneticFieldDescriptionPageNum % numOfMagneticFieldDescriptionPages;
             if (pageNumber < 0)
             {
                 pageNumber += numOfMagneticFieldDescriptionPages;
@@ -86,7 +86,7 @@ public class SingleMovingMagnetText : MonoBehaviour
         // Else, the electric field is presented
         else
         {
-            pageNumber = controller.pageNumber % numOfElectricFieldDescriptionPages;
+            pageNumber = controller.electricFieldDescriptionPageNum % numOfElectricFieldDescriptionPages;
             if (pageNumber < 0)
             {
                 pageNumber += numOfElectricFieldDescriptionPages;
