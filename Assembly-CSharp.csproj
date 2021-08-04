@@ -67,11 +67,12 @@
      <Compile Include="Assets\Scripts\Magnet\Implementation\RectZone.cs" />
      <Compile Include="Assets\Objects\Futuristic Environment\Common Scripts\Turn_Move.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\HeavisideText.cs" />
+     <Compile Include="Assets\Scripts\Magnet\Coil and Magnet\CoilAndMagnet.cs" />
      <Compile Include="Assets\Scripts\Magnet\VRRig.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\GUIPanel.cs" />
      <Compile Include="Assets\Objects\Futuristic Environment\Common Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Picture Text Script\FaradayText.cs" />
-     <Compile Include="Assets\Scripts\Magnet\Coil and Magnet\CoilAndMagnet.cs" />
+     <Compile Include="Assets\GenerateLightning.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Magnet\computeShader.compute" />

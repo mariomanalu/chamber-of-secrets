@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Scripts/UI Scripts/SideButton.cs
     - 
-    m_Values: 01
-  RevisionSummary: Fixed the warning that gets triggered everytime the right hand
-    trigger button is pressed
+    m_Values: 0000
+  RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0

@@ -55,7 +55,6 @@ public class TwoMagnets: MonoBehaviour
         // Computing the electrostatic force equation
         float distanceSquared = Mathf.Pow(Mathf.Abs(southPoleDynamicMagnet.transform.position.z - northPoleStaticMagnet.transform.position.z),2);
         float force = k * positiveCharge * negativeCharge / distanceSquared;
-        Debug.Log(force);
         display.SetText("The electrostatic force between the two poles is " + force);
     }
 }

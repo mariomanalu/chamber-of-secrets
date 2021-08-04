@@ -450,7 +450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf51050bcb69084daab3cfda8b71dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  actionAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
   hand: 1
 --- !u!95 &7348331985704159435
 Animator:
@@ -460,7 +461,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4911174108599212807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 1ae9aefe37a62de429ddc2edd1ca36f3, type: 3}
   m_Controller: {fileID: 9100000, guid: 2e24f47e07e4e2142be49c24994cdb92, type: 2}
   m_CullingMode: 1

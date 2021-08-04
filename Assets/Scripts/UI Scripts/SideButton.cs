@@ -9,11 +9,11 @@ public class SideButton : MonoBehaviour
     VectorField field;
     public void ButtonNext()
     {
-        field.fieldType = (VectorField.FieldType)((((int)field.fieldType) + 1) % 3);
+        field.fieldType = (VectorField.FieldType)((((int)field.fieldType) + 1) % 2);
     }
 
     public void ButtonPrev()
     {
-        field.fieldType = (VectorField.FieldType)((3 + ((int)field.fieldType) - 1) % 3);
+        field.fieldType = (VectorField.FieldType)((2 + ((int)field.fieldType) - 1) % 2);
     }
 }
