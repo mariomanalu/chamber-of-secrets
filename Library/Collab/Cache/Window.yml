@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Scripts/Magnet/Coil and Magnet/CoilAndMagnet.cs
+    - Assets/Scripts/Magnet/Single Moving Magnet/SingleMovingMagnetText.cs
     - 
-    m_Values: 01
+    m_Values: 000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

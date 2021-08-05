@@ -38,7 +38,7 @@ public class CoilAndMagnet : MonoBehaviour
         switch(pageNumber)
         {
             case 0:
-                display.SetText($"Michael Faraday's Magnetic Field Induction Experiment.");
+                display.SetText($"Michael Faraday's Electromagnetic Induction Experiment.");
                 break;
             case 1:
                 display.SetText($"This exhibit is grounded on Faraday’s coil and magnet experiment  1831.");

@@ -49,7 +49,7 @@ public class SingleMovingMagnetText : MonoBehaviour
                     display.SetText($"Magnetic fields may be represented by continuous lines of force.");
                     break;
                 case 3:
-                    display.SetText($"The lines of flux are continuous, forming closed loops.");
+                    display.SetText($"The lines of force are continuous, forming closed loops.");
                     break;
                 case 4:
                     display.SetText($"The forces emerge from north-seeking magnetic poles and enter south-seeking magnetic poles.");
