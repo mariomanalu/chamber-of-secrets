@@ -36,7 +36,7 @@ public class OerstedText : MonoBehaviour
                 display.SetText($"His discoveries generated a frenzy of research in the following years.");
                 break;
             case 5:
-                display.SetText($"As a result, there is a massive increase in the number of publications on the subject - most notably those of Faraday and Ampère.");
+                display.SetText($"As a result, there was a massive increase in the number of publications on the subject - most notably those of Faraday and Ampère.");
                 break;
         }
     }

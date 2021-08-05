@@ -26,10 +26,10 @@ public class CoulombText : MonoBehaviour
                 display.SetText($"He discovered that the inverse-square law also applies to point charges.");
                 break;
             case 2:
-                display.SetText($"The inverse-square law is as follows: ");
+                display.SetText($"The inverse-square law is as follows:");
                 break;
             case 3:
-                display.SetText($"The strength of a force exerted on one object by another is inversely proportional to the square of the distance between the objects.");
+                display.SetText($"the strength of a force exerted on one object by another is inversely proportional to the square of the distance between the objects.");
                 break;
             case 4:
                 display.SetText($"Coulomb carried out an experiment with a charged needle and a charged pith ball.");

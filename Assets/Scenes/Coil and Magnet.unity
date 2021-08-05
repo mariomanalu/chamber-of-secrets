@@ -7564,7 +7564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4463442878057624, guid: 82ec713d07f8ca84f8e9deff3be21b2a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4463442878057624, guid: 82ec713d07f8ca84f8e9deff3be21b2a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13556,6 +13556,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Magnet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5759101375242367398, guid: 5188b0ea2abdc684b99b731f18a14305,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5759101375242367399, guid: 5188b0ea2abdc684b99b731f18a14305,
         type: 3}
@@ -22328,7 +22333,7 @@ MonoBehaviour:
   m_text: 'How to Press a UI Button:
 
     Use the right controller to point to a
-    UI button. When a blue ray appears, press the trigger button on the right controller.qq'
+    UI button. When a blue ray appears, press the trigger button on the right controller.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27316,7 +27321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983279274}
   m_LocalRotation: {x: -0, y: -0.7133641, z: -0, w: 0.70079356}
-  m_LocalPosition: {x: -1.73, y: 1, z: -15.6}
+  m_LocalPosition: {x: 2.44, y: 1, z: 14.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 305241054}

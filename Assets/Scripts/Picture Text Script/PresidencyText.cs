@@ -23,13 +23,13 @@ public class PresidencyText : MonoBehaviour
                 display.SetText($"Three leaders and Faraday.");
                 break;
             case 1:
-                display.SetText($"Faraday was offered the presidency of the United Kingdom’s national academy of sciences called the Royal Society.");
+                display.SetText($"Faraday was offered the presidency of the United Kingdom’s national academy of sciences, called the Royal Society.");
                 break;
             case 2:
                 display.SetText($"He declined on both occassions.");
                 break;
             case 3:
-                display.SetText($"Many claim that he was also offered a knighthood, but declined this honor as well.");
+                display.SetText($"Many claim that he was also offered a knighthood, but that he declined this honor as well.");
                 break;
             case 4:
                 display.SetText($"Pictured is an illustration of three leaders of the Royal society offering Faraday the presidency.");

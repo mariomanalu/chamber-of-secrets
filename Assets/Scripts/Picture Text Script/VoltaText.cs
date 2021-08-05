@@ -27,7 +27,7 @@ public class VoltaText : MonoBehaviour
                 display.SetText($"He was an Italian physicist, chemist, and pioneer of electricity and power.");
                 break;
             case 2:
-                display.SetText($"He is credited as the inventor of th electric battery.");
+                display.SetText($"He is credited as the inventor of electric battery.");
                 break;
             case 3:
                 display.SetText($"He invented the voltaic pile in 1799.");

@@ -66,16 +66,16 @@ public class TwoMagnets: MonoBehaviour
         switch(pageNumber)
         {
             case 0:
-                display.SetText($"This experience presents a scenarion in which two magnets generate a magnetic field.");
+                display.SetText($"This exhibit presents a scenario in which two magnets generate a magnetic field.");
                 break;
             case 1:
-                display.SetText($"We have seen the magnetic field of a single moving bar magnet in the previous experience.");
+                display.SetText($"We have seen the magnetic field of a single moving bar magnet in the previous exhibit.");
                 break;
             case 2:
                 display.SetText($"Now, what happens to the field visualizations when a magnet is moving into or away from another magnet?");
                 break;
             case 3:
-                display.SetText($"Text books often picture that there is a constant number of magnetic field lines between two magnets.");
+                display.SetText($"Textbooks often picture that there is a constant number of magnetic field lines between two magnets.");
                 break;
             case 4:
                 display.SetText($"That kind of visualization is misleading.");
@@ -84,22 +84,22 @@ public class TwoMagnets: MonoBehaviour
                 display.SetText($"It is misleading because there is no particular number that represents the number of magnetic field lines.");
                 break;
             case 6:
-                display.SetText($"A key concept this experience illustrates is that magnetic field lines always fill in the space between the magnets.");
+                display.SetText($"A key concept this exhibit illustrates is that magnetic field lines always fill in the space between the magnets.");
                 break;
             case 7:
-                display.SetText($"Another key concept demonstrated in this experience is electrostatic force.");
+                display.SetText($"Another key concept demonstrated in this exhibit is electrostatic force.");
                 break;
             case 8:
                 display.SetText($"Electrostatic force is the force between two point charges.");
                 break;
             case 9:
-                display.SetText($"The ideas behind it is summarized by Coulomb's Law that states that");
+                display.SetText($"The ideas behind it is summarized by Coulomb's Law, as follows:");
                 break;
             case 10:
-                display.SetText($"The magnitude of the electrostatic force of attraction or repulsion between two point charges is");
+                display.SetText($"the magnitude of the electrostatic force of attraction or repulsion between two point charges is ...");
                 break;
             case 11:
-                display.SetText($"directly proportional to the product of the magnitudes of charges");
+                display.SetText($"directly proportional to the product of the charges,");
                 break;
             case 12:
                 display.SetText($"and inversely proportional to the square of the distance between them.");

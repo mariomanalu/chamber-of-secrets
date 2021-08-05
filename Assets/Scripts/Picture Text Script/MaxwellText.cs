@@ -12,10 +12,10 @@ public class MaxwellText : MonoBehaviour
     ControllerButton controller;
     
     void Update(){
-        int pageNumber = controller.pageNumber % 5;
+        int pageNumber = controller.pageNumber % 4;
         if (pageNumber < 0)
         {
-            pageNumber += 5;
+            pageNumber += 4;
         }
         switch(pageNumber)
         {
@@ -30,9 +30,6 @@ public class MaxwellText : MonoBehaviour
                 break;
             case 3:
                 display.SetText($"He sought to derive equations which would describe Faraday’s lines of force.");
-                break;
-            case 4:
-                display.SetText($"MORE TEXT TO COME");
                 break;
         }
     }

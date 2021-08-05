@@ -32,10 +32,10 @@ public class NewtonText : MonoBehaviour
                 display.SetText($"He also believed that force always acted in straight lines.");
                 break;
             case 4:
-                display.SetText($"His belief was widely accepted until later when Faraday showed that force");
+                display.SetText($"This Newtonian conceptualization of force is often referred to as action at a distance.");
                 break;
             case 5:
-                display.SetText($"This Newtonian conceptualization of force is often referred to as action at a distance.");
+                display.SetText($"This concept was widely accepted until later when Faraday showed that force do not always act in straight lines.");
                 break;
         }
     }
